@@ -1,5 +1,10 @@
 # Install NVIDIA driver and CUDA toolkit
 
+### Prerequisites
+1. Red Hat 
+2. root or sudo permission
+
+*Please note that on the day of this writing I am using Red Hat version 8*
 
 1. Identify if the GPU is running on your system
 ```sh
@@ -43,3 +48,20 @@ sudo sh cuda_10.1.243_418.87.00_linux.run
 8. It will take you to the main menu of installation. Type **accept** to EULA agreement and select **install**. It can take 4-5 minutes.
 
 9. When it is done, both NVIDIA driver and CUDA toolkits can be found at **/usr/local/cuda/**.
+
+
+---
+
+For Ubuntu, NVIDIA driver can be easily installed using **apt** or **apt-get** package manager.
+
+1. Update the system and install the drivers
+```
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install --no-install-recommends nvidia-384 libcuda1-384 nvidia-opencl-icd-384
+sudo reboot
+```
+
+2. Then see if NVIDIA driver found GPU or not by running command
+```
+nvidia-smi
+```
