@@ -1,4 +1,4 @@
-# Install NVIDIA driver
+# Install NVIDIA driver and CUDA toolkit
 
 
 1. Identify if the GPU is running on your system
