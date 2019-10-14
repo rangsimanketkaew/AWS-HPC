@@ -1,6 +1,6 @@
 # Note on NWChem
 
-*NWChem is Northwest Computational Chemistry Package developed at EMSL, PNNL, USA
+*NWChem is Northwest Computational Chemistry Package developed at EMSL, PNNL, USA*
 
 ## NWChem Packages
 
@@ -9,9 +9,9 @@
 Module  | Description
 --------|-------------
 NWChem + OpenIB                 | small calculation
-NWChem + ARMCI Casper           | medium
+NWChem + ARMCI Casper           | medium & large calculations
 NWChem + ARMCI MPI-PR           | medium & large calculations  
-NWchem + ARMCI MPI-PR + Casper  | medium
+NWchem + ARMCI MPI-PR + Casper  | medium & large calculations
 
 ## Recommendation
 
@@ -28,9 +28,9 @@ memory total 1000 stack 600 mb heap 50 mb global 450 mb"
 
 1. Interactive Job Submission on Cluster:
 
-    NWChem job can be submitted easily to SGE queue by using "subnwchem" program.
-Copy subnwchem from /share/apps/nwchem-6.8/ to your home directory, then execute
-subnwchem in the working directory where your NWChem input file is, e.g.
+    NWChem job can be submitted easily to SGE queue by using **subnwchem**, an interactive NWChem job controller. Clone or copy subnwchem from [my repository](https://github.com/rangsimanketkaew/QM-on-TAIWANIA/blob/master/subnwchem) to your system, and tweak it to satisfy your system and suite your need. 
+    Then execute subnwchem in the working directory where your NWChem input file is, e.g.
+
     ```
     subnwchem ex_nwchem.nw
     ```  
@@ -41,19 +41,19 @@ subnwchem in the working directory where your NWChem input file is, e.g.
     subnwchem ex_nwchem.nw ex_nwchem.out
     ```
 
-    where `subnwchem` is an interactive NWChem job controller.
-
 2. Single run:
 
     ```
-    /share/apps/nwchem-6.8/nwchem-6.8.1/bin/LINUX64/nwchem ex_nwchem.nw
+    $NWCHEM_TOP/bin/LINUX64/nwchem INPUT.nw >& OUTPUT &
     ```
 
 3. Parallel run:
 
     ```
-    mpirun -np 4 /share/apps/nwchem-6.8/nwchem-6.8.1/bin/LINUX64/nwchem ex_nwchem.nw
+    mpirun -np N $NWCHEM_TOP/bin/LINUX64/nwchem INPUT.nw >& OUTPUT &
     ```
+
+    where *N* is the total number of processing cores.
 
 ## Contact
 
