@@ -1,7 +1,7 @@
 # Install NWChem with OpenMPI
 
 ## Prerequisites
-1. Ubuntu
+1. Ubuntu (version 14 or higher)
 2. NWChem source code
 3. OpenMPI
 4. root or sudo permission
@@ -81,9 +81,9 @@ For more information please visit https://www-lb.open-mpi.org/faq/?category=mpi-
 ./install-nwchem.sh
 ```
 
-6. If it is done without any error, a NWChem executable binary file can be found at $NWCHEM_TOP/bin/LINUX_64/. For example,
+6. If it is done without any error, a NWChem executable binary file can be found at $NWCHEM_TOP/bin/LINUX64/. For example,
 ```
-/home/ubuntu/nwchem-6.8.1/bin/LINUX_64/nwchem
+/home/ubuntu/nwchem-6.8.1/bin/LINUX64/nwchem
 ```
 
-
+7. Create a resouce file and put it as a hidden file under your home directory.
