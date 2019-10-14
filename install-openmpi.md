@@ -1,9 +1,11 @@
 # Install OpenMPI
 
-### Prerequisites
+## Prerequisites
 1. The tarball of OpenMPI.
 2. tar - an archiving utility
 3. root or sudo permission (optional)
+
+## Step-by-step installation instruction
 
 1. Download the tarball of source of OpenMPi from its official website https://www.open-mpi.org. For example, on the day of this writing, I download OpenMPI version 4.0.2 and install it on Red Hat 8 and Ubuntu.
 ```

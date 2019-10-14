@@ -1,10 +1,12 @@
 # Install NVIDIA driver and CUDA toolkit
 
-### Prerequisites
+## Prerequisites
 1. Red Hat 
 2. root or sudo permission
 
 *Please note that on the day of this writing I am using Red Hat version 8*
+
+## Step-by-step installation instruction
 
 1. Identify if the GPU is running on your system
 ```sh
