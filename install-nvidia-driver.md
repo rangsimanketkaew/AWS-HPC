@@ -26,14 +26,14 @@ sudo reboot
 sudo systemctl isolate multi-user.target
 ```
 
-6. Download **CUDA toolkit installer** from this website. This toolkit will install you both NVIDIA driver and CUDA. For example,
+6. Download **CUDA toolkit installer** from this website https://developer.nvidia.com/cuda-downloads. This toolkit will install you both NVIDIA driver and CUDA. For example,
 ```
 cd $HOME
 wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
 sudo sh 
 ```
 
-7. Execute the installer using **sh** command
+1. Execute the installer using **sh** command
 ```
 sudo sh cuda_10.1.243_418.87.00_linux.run
 ```
