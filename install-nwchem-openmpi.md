@@ -86,4 +86,4 @@ For more information please visit https://www-lb.open-mpi.org/faq/?category=mpi-
 /home/ubuntu/nwchem-6.8.1/bin/LINUX64/nwchem
 ```
 
-7. Create a resouce file and put it as a hidden file under your home directory.
+7. Create a resource file and put it as a hidden file under your home directory.
