@@ -8,6 +8,8 @@ lspci -vnn | grep VGA
 
 2. Install all development tools and dependencies
 ```
+sudo yum update
+sudo yum groupinstall "Development Tools"
 sudo dnf install elfutils-libelf-devel "kernel-devel-uname-r == $(uname -r)"
 ```
 
