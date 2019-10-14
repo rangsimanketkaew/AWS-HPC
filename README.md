@@ -1,6 +1,6 @@
 # CompEnv-AWS-EC2
 
-Computational environment for Computational Chemistry on AWS EC2 platform.
+Computational environment and Computational Chemistry on AWS EC2 platform.
 
 ## Resources
 
