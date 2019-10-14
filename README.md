@@ -4,13 +4,24 @@ Computational environment for Computational Chemistry on AWS EC2 platform.
 
 ## Resources
 
-- Initial setup on AWS EC2 instance
-- Install development tools on popular OS such as Red Hat, CentOS, Ubuntu, and Amazon Linux
-- Install computational chemistry program packages
-  - NWChem 
-- Setup parallel tools on and between instances
+- Initial setup of the AWS EC2 instance
+  - AWS documentation
+- Install development tools for popular OSs such as Red Hat, CentOS, and Ubuntu.
+  - GNU and GCC compilers
+  - Intel Compiler
+  - Intel MKL library
+- Setup massage passing interface (MPI) library
   - OpenMPI
-  - Job scheduler, such as SLURM and TORQUE
+  - MPICH
+  - Intel MPI
+- Install accerelated library
+  - NVIDIA driver and CUDA toolkit
+- Install program packages
+  - NWChem
+  - Gromacs
+- Job scheduler
+  - SLURM
+  - TORQUE
 
 ## Contact
 
