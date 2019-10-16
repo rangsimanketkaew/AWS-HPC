@@ -1,5 +1,7 @@
 # CompEnv-AWS-EC2
 
+![aws-logo](images/1200px-Amazon_Web_Services_Logo.svg.png)
+
 Computational environment and Computational Chemistry on AWS EC2 platform.
 
 *Popular OSs: Red Hat, CentOS, and Ubuntu.*
