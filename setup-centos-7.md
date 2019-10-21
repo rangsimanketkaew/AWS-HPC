@@ -8,3 +8,8 @@ Website: https://aws.amazon.com/marketplace/pp/B00O7WM7QW/ref=mkt_ste_catgtm_oss
 
 ## Setting up
 
+1. Change root password: `sudo passwd root`
+2. Update packages: `sudo yum update`
+3. Install development tools: `sudo yum groupinstall "Development Tools"`
+4. Install Python 2 and Python 3: `sudo yum install python-devel python3-devel"
+5. Install `wget` and `locate`: `sudo yum install wget mlocate`
