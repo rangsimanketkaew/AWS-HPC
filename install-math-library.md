@@ -170,6 +170,11 @@ chmod 555 /root/LAPACK/*.a
 cp /root/LAPACK/*.a /usr/local/lib
 ```
 
+### Error & Fixing
+
+Error: LAPACK make fails: `recipe for target 'znep.out' failed`
+Fixing: `ulimit -s unlimited`
+
 ## ScaLAPACK
 
 1. Download ScaLAPACK from www.netlib.org/scalapack
