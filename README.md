@@ -2,9 +2,9 @@
 
 ![aws-logo](images/1200px-Amazon_Web_Services_Logo.svg.png)
 
-Computational environment and Computational Chemistry on AWS EC2 platform.
+**Computational environment and Computational Chemistry on AWS EC2 platform.**
 
-*Popular OSs: Red Hat, CentOS, and Ubuntu.*
+*Platform of Interest: Red Hat, CentOS, and Ubuntu*
 
 ## Resources
 
@@ -14,17 +14,20 @@ Computational environment and Computational Chemistry on AWS EC2 platform.
   - GNU and GCC compilers
   - Intel Compiler
   - Intel MKL library
-- Setup massage passing interface (MPI) library
+- Install massage passing interface (MPI) library
+  - Intel MPI
   - OpenMPI
   - MPICH
-  - Intel MPI
-- Install accerelated library
-  - NVIDIA driver and CUDA toolkit
+- Install accelerated library
+  - NVIDIA driver
+  - CUDA toolkit
 - Install program packages
   - NWChem
+  - ORCA
   - Gromacs
+  - LAMMPS
 - Parallel cluster
-  - AWS CLI
+  - AWS Parallel Cluster
 - Job scheduler
   - SLURM
   - TORQUE
