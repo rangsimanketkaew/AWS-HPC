@@ -1,0 +1,37 @@
+start tce_ccsd-t_h2o
+
+echo
+
+geometry units bohr
+O     0.00000000     0.00000000     0.22138519
+H     0.00000000    -1.43013023    -0.88554075
+H     0.00000000     1.43013023    -0.88554075
+end
+
+basis spherical
+  H library cc-pVDZ
+  O library cc-pVDZ
+end
+
+scf
+  thresh 1.0e-10
+  tol2e 1.0e-10
+  singlet
+  rhf
+end
+
+tce
+  io ga
+  maxiter 60
+  thresh 1.e-5
+  2eorb
+  2emet 3
+  attilesize 30
+  tilesize 8
+  freeze atomic
+  ccsd(t)
+  cuda 1  # request GPU
+  diis 20
+end
+
+task tce optimize
