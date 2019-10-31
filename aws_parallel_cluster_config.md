@@ -28,7 +28,7 @@ master_instance_type = c5.xlarge
 compute_instance_type = c5.4xlarge
 master_root_volume_size = 30
 compute_root_volume_size = 30
-initial_queue_size = 2
+initial_queue_size = 0
 max_queue_size = 8
 min_queue_size = 0
 maintain_initial_size = false
@@ -39,8 +39,8 @@ placement = cluster
 ebs_settings = shared
 fsx_settings = fs
 vpc_settings = public
-spot_bid_percentage=
-spot_price=
+##spot_bid_percentage=
+spot_price=0.5
 
 [ebs shared]
 shared_dir = neweq_shared
