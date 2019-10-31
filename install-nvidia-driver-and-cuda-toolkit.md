@@ -108,3 +108,8 @@ sudo apt search nvidia
 ```
 nvidia-smi
 ```
+
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+

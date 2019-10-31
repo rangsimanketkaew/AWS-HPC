@@ -1,3 +1,8 @@
+# Install Basic Tools on CentOS 7
+
+1. Create a Bash file called `install-basic-tools.sh` on CentOS node.
+
+```
 #!/bin/bash
 
 sudo yum install -y -q -e 0 centos-release-scl
@@ -29,3 +34,15 @@ sudo yum install -y -q -e 0 htop
 sudo yum install -y -q -e 0 GMT
 sudo yum install -y -q -e 0 ghostscript
 sudo yum groupinstall -y -q -e 0 "Development Tools"
+```
+
+2. Execute the script using following command
+
+```
+$ sh ./install-basic-tools.sh
+```
+
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+

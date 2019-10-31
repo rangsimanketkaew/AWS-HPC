@@ -34,3 +34,7 @@ cd  l_comp_lib_2018.2.199_comp.cpp_redist
 sudo ./install.sh
 ```
 
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+

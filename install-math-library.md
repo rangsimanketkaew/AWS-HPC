@@ -270,3 +270,8 @@ Install the ScaLAPACK library by:
 chmod 555 /root/SCALAPACK/libscalapack.a
 cp /root/SCALAPACK/libscalapack.a /usr/local/lib
 ```
+
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+

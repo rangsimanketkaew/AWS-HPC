@@ -23,3 +23,8 @@ Note that you are able to change setting of a running compute node anytime.
 3. Install development tools: `sudo yum groupinstall "Development Tools"`
 4. Install Python 2 and Python 3: `sudo yum install python-devel python3-devel"
 5. Install `wget` and `locate`: `sudo yum install wget mlocate`
+
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+

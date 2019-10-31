@@ -54,3 +54,8 @@ source $HOME/.bashrc
 ```
 mpirun --version
 ```
+
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+

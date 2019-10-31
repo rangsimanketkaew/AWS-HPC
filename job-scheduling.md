@@ -64,3 +64,7 @@ $ qsub job.sh
 $ sbatch job.sh
 ```
 
+## Contact 
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com
+
