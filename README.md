@@ -28,7 +28,10 @@
   - LAMMPS
 - Parallel cluster
   - AWS Parallel Cluster
+  - Spot Instance
 - Job scheduler
+  - SGE
+  - AWSBATCH
   - SLURM
   - TORQUE
 
