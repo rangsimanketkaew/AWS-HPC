@@ -45,7 +45,7 @@ spot_price=
 [ebs shared]
 shared_dir = neweq_shared
 volume_type = st1
-volume_size = 50
+volume_size = 500
 
 [fsx fs]
 shared_dir = /fsx
