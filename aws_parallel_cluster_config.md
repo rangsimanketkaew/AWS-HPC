@@ -50,11 +50,11 @@ volume_size = 50
 [fsx fs]
 shared_dir = /fsx
 storage_capacity = 3600
-imported_file_chunk_size = 1024
+##imported_file_chunk_size = 1024
 
 [vpc public]
-vpc_id = vpc-3a720c40
-master_subnet_id = subnet-0801f345
+vpc_id = vpc-XXXXXXXX
+master_subnet_id = subnet-XXXXXXXX
 
 [aliases]
 ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
