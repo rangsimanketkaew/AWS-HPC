@@ -111,8 +111,10 @@ Documentation on configuration can be found at [this website](https://docs.aws.a
 
 - List all existing cluster, for example:
 
+```
 (pcluster-virtenv) [duff@]$ pcluster list
 hello-cluster1
+```
 
 ## Connect to the cluster
 
