@@ -85,7 +85,7 @@ Master Subnet ID []: subnet-abcdefghigjlmnop1
 
 - Launch new cluster with default settings offered by AWS
 
-By default, AWS ParallelCluster uses the file ~/.parallelcluster/config for all configuration parameters.
+By default, AWS ParallelCluster uses the file `~/.parallelcluster/config` for all configuration parameters.
 
 ```
 (pcluster-virtenv) [duff@]$ pcluster create NAME_OF_CLUSTER
@@ -134,11 +134,11 @@ Update the cluster with the latest change of configuration file:
 Normal output should look like this:
 
 ```
-The authenticity of host '35.153.251.20 (35.153.251.20)' can't be established.
-ECDSA key fingerprint is SHA256:u9+A0i6Y94JcRGYW8eyi5e4N+iiNtpPTPAwPY5PQcWk.
+The authenticity of host 'xxx.xxx.xxx.xxx (xxx.xxx.xxx.xxx)' can't be established.
+ECDSA key fingerprint is SHA256:u9+AXXXXXXXXJcRGYW8eyi5e4N+iiNtpPTXXXXXXXXXXX.
 Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '35.153.251.20' (ECDSA) to the list of known hosts.
-Last login: Sun Nov 11 20:12:12 2018
+Warning: Permanently added 'xxx.xxx.xxx.xxx' (ECDSA) to the list of known hosts.
+Last login: XXX XX 20:12:12 2019
 
        __|  __|_  )
        _|  (     /   Amazon Linux AMI
@@ -149,10 +149,10 @@ https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
 
 ## Show how many compute nodes are running out there
 
-What is you use SGE as a job scheduler, you can use qhost commmand to show all running compute nodes
+What is you use SGE as a job scheduler, you can use `qhost` commmand to show all running compute nodes
 
 ```
-[ec2-user@ip-123-45-6-78 ~]$ qhost
+[ec2-user@ip-172-31-0-14 ~]$ qhost
 HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  SWAPTO  SWAPUS
 ----------------------------------------------------------------------------------------------
 global                  -               -    -    -    -     -       -       -       -       -
@@ -162,20 +162,28 @@ ip-172-31-10-XX         lx-amd64        2    1    1    2  0.02    3.7G  156.8M  
 
 ## Testing
 
-1. Try submitting a simple hostname job that will show the AutoScaling feature of ParallelCluster using the mpirun command, for example:
+1. Create a file called hello_job.sh
 
 ```
-[ec2-user@ip-172-31-0-14 ~]$ echo /usr/lib64/openmpi/bin/mpirun hostname | qsub -pe mpi 16
-Your job 1 ("STDIN") has been submitted
+#!/bin/bash
+sleep 30
+echo "Hello World from $(hostname)"
 ```
 
-2. Use qstat command to show the status of a submitted job:
+2. Submit a simple `hello_job.sh` job that will show the AutoScaling feature of ParallelCluster using the SGE, for example:
+
+```
+[ec2-user@ip-172-31-0-14 ~]$ qsub -pe mpi 16 hello_job.sh
+Your job 1 ("hello_job.sh") has been submitted
+```
+
+3. Use `qstat` command to show the status of a submitted job:
 
 ```
 [ec2-user@ip-172-31-0-14 ~]$ qstat
-job-ID  prior   name       user         state submit/start at     queue           slots ja-task-ID
---------------------------------------------------------------------------------------------------
-      1 0.00000 STDIN      ec2-user     qw    11/11/2018 20:25:38                 16
+job-ID  prior   name        user         state submit/start at     queue           slots ja-task-ID
+---------------------------------------------------------------------------------------------------
+      1 0.55500 hello_job.s ec2-user     r     31/10/2019 20:25:38   XXX           16
 ```
 
 A few minute later AWS AutoScailing will launch the instance automatically.
