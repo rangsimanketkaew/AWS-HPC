@@ -88,13 +88,19 @@ Master Subnet ID []: subnet-abcdefghigjlmnop1
 By default, AWS ParallelCluster uses the file ~/.parallelcluster/config for all configuration parameters.
 
 ```
-pcluster create NAME_OF_CLUSTER
+(pcluster-virtenv) [duff@]$ pcluster create NAME_OF_CLUSTER
 ```
 
 - Launch new cluster with configure file
 
 ```
-pcluster create NAME_OF_CLUSTER --config PATH_TO_CONFIG_FILE
+(pcluster-virtenv) [duff@]$ pcluster create NAME_OF_CLUSTER --config PATH_TO_CONFIG_FILE
+Beginning cluster creation for cluster: NAME_OF_CLUSTER
+Creating stack named: parallelcluster-NAME_OF_CLUSTER
+Status: parallelcluster-NAME_OF_CLUSTER - CREATE_COMPLETE
+MasterPublicIP: XXX.XXX.XXX.XXX
+ClusterUser: centos
+MasterPrivateIP: XXX.XXX.XXX.XXX
 ```
 
 Example of **config** file is also available.
@@ -148,8 +154,8 @@ What is you use SGE as a job scheduler, you can use qhost commmand to show all r
 HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  SWAPTO  SWAPUS
 ----------------------------------------------------------------------------------------------
 global                  -               -    -    -    -     -       -       -       -       -
-ip-172-31-10-01         lx-amd64        2    1    1    2  0.02    3.7G  156.2M     0.0     0.0
-ip-172-31-10-02         lx-amd64        2    1    1    2  0.02    3.7G  156.8M     0.0     0.0
+ip-172-31-10-XX         lx-amd64        2    1    1    2  0.02    3.7G  156.2M     0.0     0.0
+ip-172-31-10-XX         lx-amd64        2    1    1    2  0.02    3.7G  156.8M     0.0     0.0
 ```
 
 ## Testing
@@ -177,14 +183,14 @@ A few minute later AWS AutoScailing will launch the instance automatically.
 HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  SWAPTO  SWAPUS
 ----------------------------------------------------------------------------------------------
 global                  -               -    -    -    -     -       -       -       -       -
-ip-172-31-0-72          lx-amd64        2    1    1    2  0.11    3.7G  189.0M     0.0     0.0
-ip-172-31-10-65         lx-amd64        2    1    1    2  0.29    3.7G  189.2M     0.0     0.0
-ip-172-31-14-49         lx-amd64        2    1    1    2  0.11    3.7G  189.1M     0.0     0.0
-ip-172-31-2-78          lx-amd64        2    1    1    2  0.06    3.7G  189.4M     0.0     0.0
-ip-172-31-3-226         lx-amd64        2    1    1    2  0.11    3.7G  185.5M     0.0     0.0
-ip-172-31-4-248         lx-amd64        2    1    1    2  0.11    3.7G  186.2M     0.0     0.0
-ip-172-31-5-112         lx-amd64        2    1    1    2  0.08    3.7G  188.9M     0.0     0.0
-ip-172-31-5-50          lx-amd64        2    1    1    2  0.08    3.7G  189.0M     0.0     0.0
+ip-172-31-0-XX          lx-amd64        2    1    1    2  0.11    3.7G  189.0M     0.0     0.0
+ip-172-31-10-XX         lx-amd64        2    1    1    2  0.29    3.7G  189.2M     0.0     0.0
+ip-172-31-14-XX         lx-amd64        2    1    1    2  0.11    3.7G  189.1M     0.0     0.0
+ip-172-31-2-XX          lx-amd64        2    1    1    2  0.06    3.7G  189.4M     0.0     0.0
+ip-172-31-3-XXX         lx-amd64        2    1    1    2  0.11    3.7G  185.5M     0.0     0.0
+ip-172-31-4-XXX         lx-amd64        2    1    1    2  0.11    3.7G  186.2M     0.0     0.0
+ip-172-31-5-XXX         lx-amd64        2    1    1    2  0.08    3.7G  188.9M     0.0     0.0
+ip-172-31-5-XX          lx-amd64        2    1    1    2  0.08    3.7G  189.0M     0.0     0.0
 ```
 
 Then, after 10 minutes, when the job is completed, the AutoScailing will terminate those compute nodes for you.
