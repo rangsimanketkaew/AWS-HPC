@@ -34,9 +34,9 @@ ClusterUser: centos
 MasterPrivateIP: XXX.XXX.XXX.XXX
 ```
 
-Example of **config** file is also available.
-
 Documentation on configuration can be found at [this website](https://docs.aws.amazon.com/parallelcluster/latest/ug/configuration.html).
+
+In addition, you can look at [this page](configure-parallelcluster-config.md) for more details on adjusting `config` file.
 
 ## Check the status of existing cluster
 

@@ -1,12 +1,17 @@
 # AWS Parallel Cluster Configuration
 
-## Example of config file
+## Prerequisite
 
-1. Create new file in a hidden folder at your home directory, for example:
+- AWS CLi
+- AWS ParallelCluster
+
+## Step-by-step configuration of AWS parallelcluster
+
+1. Create a new file, for example called `config_new`, in a hidden `.parallelcluster` folder in your home directory, for example:
 
 ```
-cd $HOME
-vi .parallelcluster/config_new
+$ cd $HOME
+$ vi .parallelcluster/config_new
 ```
 
 2. Append the following codes to config_new file and change the value for each configuration to your need.
@@ -39,7 +44,7 @@ placement = cluster
 ebs_settings = shared
 fsx_settings = fs
 vpc_settings = public
-##spot_bid_percentage=
+##spot_bid_percentage =
 spot_price=0.5
 
 [ebs shared]
@@ -59,11 +64,23 @@ master_subnet_id = subnet-XXXXXXXX
 [aliases]
 ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
 
-[scailing custom]
+[scaling custom]
 scaledown_idletime = 1
 ```
 
-Note that above config is adapted from the original config file provided by [EDGE's user guide](http://usr.dial3343.org/en/master/chapters/setup/cloud.html#sec-cloud-parallel-cluster).
+3. You can now launch a new cluster using this new config file, like this:
+
+```
+$ pcluster create new_cluster --config $HOME/.parallelcluster/config_new
+```
+
+This step can take 5 - 30 min (depending on configuration)
+
+---
+
+Documentation on configuration can be found at [this website](https://docs.aws.amazon.com/parallelcluster/latest/ug/configuration.html).
+
+Adapted from the original config file provided by [EDGE's user guide](http://usr.dial3343.org/en/master/chapters/setup/cloud.html#sec-cloud-parallel-cluster).
 
 ## Contact
 
