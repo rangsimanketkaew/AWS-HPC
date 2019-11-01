@@ -1,87 +1,18 @@
-# Setup AWS Virtual Parallel Cluster
-
-Virtual parallel cluster = Master node + Slave node(s)
+# Create AWS (Virtual) Parallel Cluster
 
 ## Parallel Cluster
 
+FYI: Virtual parallel cluster = Master node + Slave node(s)
+
 _Note that the CnfCluster is obsoleted. If you are currently using CnfCluster, you can start using a new AWS ParallelCluster (pcluster) instead._
 
-## Create virtual environment
+## Prerequisites
 
-```
-[duff]$ virtualenv ~/Envs/pcluster-virtenv
-[duff]$ source ~/Envs/pcluster-virtenv/bin/activate
-(pcluster-virtenv) [duff]$ 
-```
+1. Virtualenv (optional)
+2. AWS CLI
+3. AWS ParallelCluster
 
-## Configure aws credential
-
-```
-(pcluster-virtenv) [duff]$ pip install --upgrade awscli
-(pcluster-virtenv) [duff@]$ aws configure
-AWS Access Key ID []: <aws_access_key>
-AWS Secret Access Key []: <aws_secret_access_key>
-Default region name []: us-east-1
-Default output format []: json
-(pcluster-virtenv) [duff]$ aws s3 mb s3://duff-parallelcluster
-make_bucket: duff-parallelcluster 
-```
-
-## Configure parallelcluster credential
-
-- Install aws-parallelcluster
-
-```
-(pcluster-virtenv) [duff]$ pip install aws-parallelcluster
-...
-... output snipped...
-...
-Successfully installed aws-parallelcluster-2.4.1 ...
-```
-
-- When it's completed, let's configure the cluster
-
-```
-(pcluster-virtenv) [duff@]$ pcluster configure
-Cluster Template [default]:
-AWS Access Key ID []:  <blank>
-AWS Secret Access Key ID []: <blank>
-Acceptable Values for AWS Region ID:
-    us-east-1
-    us-east-2
-    us-west-1
-    us-west-2
-    eu-west-3
-    eu-west-2
-    eu-west-1
-    ca-central-1
-    eu-central-1
-    ap-northeast-2
-    ap-northeast-1
-    sa-east-1
-    ap-south-1
-    ap-southeast-1
-    ap-southeast-2
-AWS Region ID []: us-east-1
-VPC Name [public]:
-Acceptable Values for Key Name: <blank>
-    duff_key_us-east-1
-Key Name []: duff_key_us-east-1
-Acceptable Values for VPC ID:
-    vpc-12345678901234567
-    vpc-abcdefghigjlmnopq
-VPC ID []: vpc-abcdefghigjlmnopq
-Acceptable Values for Master Subnet ID:
-    subnet-abcdefghigjlmnop1
-    subnet-abcdefghigjlmnop2
-    subnet-abcdefghigjlmnop3
-    subnet-abcdefghigjlmnop4
-    subnet-abcdefghigjlmnop5
-    subnet-abcdefghigjlmnop6
-Master Subnet ID []: subnet-abcdefghigjlmnop1
-```
-
-## Create the cluster
+## Let's create the cluster
 
 - Launch new cluster with default settings offered by AWS
 
