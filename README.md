@@ -10,10 +10,9 @@ This Github repository provides all information about high performance computing
 
 - Initial setup of AWS EC2 instance
   - AWS documentation
-- Create Linux distribution
-  - Red Hat
-  - CentOS
-  - Ubuntu
+- Create instance and compute node
+  - Your first compute node on AWS EC2
+  - Linux distribution: Red Hat, CentOS, and Ubuntu
 - Create cloud cluster
   - AWS CLI
   - AWS ParallelCluster
