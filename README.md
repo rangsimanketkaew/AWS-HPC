@@ -4,10 +4,20 @@
 
 **Computational environment and Computational Chemistry on AWS EC2 platform.**
 
-This Github repository provides information about high performance computing (HPC) and cluster management tools on AWS Cloud Cluster services. Also, it will tell how to leverage Elastic Cloud Cluster (EC2), Amazon EC2 Fleet, Amazon ParallelCluster, Amazon CloudFormation, Amazon Elastic Block Store (EBS), Amazon Elastic File System (EFS), Amazon Simple Storage Service (S3), and Amazon AutoScaling features.
+This Github repository provides information about high performance computing (HPC) and cluster management tools on AWS Cloud Cluster services. Also, it will tell how to leverage AWS services related to cloud cluster as follows:
+
+- Amazon Elastic Cloud Cluster (EC2)
+- Amazon ParallelCluster
+- Amazon CloudFormation
+- Amazon EC2 Fleet
+- Amazon Elastic Block Store (EBS)
+- Amazon Elastic File System (EFS)
+- Amazon Simple Storage Service (S3)
+- Amazon AutoScaling
 
 ## Getting started and quick launching AWS EC2 instance
 
+- [What is AWS EC2?](https://www.google.com/search?q=what+is+aws+ec2&rlz=1C1CHBF_enTH823TH823&oq=what+is+AWS+EC2)
 - [Creating your first compute node on AWS EC2](create-aws-ec2-instance.md)
 
 ## Initial creation and setup of AWS EC2 instance
@@ -31,7 +41,7 @@ This Github repository provides information about high performance computing (HP
 8. Set a security group (optional)
 9. Launch instance
 10. Create a new key pair or choose an existing key pair
- 
+
 **Let's keep in mind downloading a new created key pair (.pem) before launching instance as you will not be able to download it again.**
 
 ## Creating cloud cluster
@@ -86,6 +96,10 @@ This Github repository provides information about high performance computing (HP
   - [Installing with OpenMPI with GPU CUDA](nwchem/install-nwchem-openmpi-gpu.md)
   - [Note on NWChem compilation](nwchem/note-on-nwchem.md)
 - ORCA
+- GAMESS (US)
+- PSI4
+- OpenMolcas
+- CP2K
 - Gromacs
 - LAMMPS
 
