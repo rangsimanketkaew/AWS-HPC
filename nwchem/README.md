@@ -8,7 +8,7 @@ Website: http://www.nwchem-sw.org
 Github: https://github.com/nwchemgit/nwchem
 Documentation: https://github.com/nwchemgit/nwchem/wiki
 
-## Specification of compute node on AWS EC2 cluster
+## Specification of AWS EC2 instance I used for writing this page
 
 On the day of this writing:
 
@@ -23,7 +23,7 @@ On the day of this writing:
 
 ## Install NWChem on AWS EC2 cluster
 
-### Prerequisite
+### Prerequisites
 
 - root or sudo permission (for installing program at global level)
 - C++ and Fortran compilers such as GNU or Intel compiler
@@ -45,10 +45,14 @@ Example of Bash script for compiling and installing NWChem 6.8.1 on different Li
 5. Ubuntu 18.04
 6. Ubuntu 18.04 with GPU
 
-### Let's start!
+### Let's compile and install NWChem
 
 1. Execute the install bash script
 2. Wait for 20 - 40 min (depending on configuration setting and system performance)
 3. NWChem executable binary will be created at $NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem
 
-where $NWCHEM_TOP and $NWCHEM_TARGET are environment variables that define the top directory of `nwchem-6.8.1` and platform of machine such as `LINUX64`.
+where `$NWCHEM_TOP` and `$NWCHEM_TARGET` are environment variables that define the top directory of `nwchem-6.8.1` and platform of machine such as `LINUX64`.
+
+## Contact
+
+Rangsiman Ketkaew - rangsiman1993@gmail.com

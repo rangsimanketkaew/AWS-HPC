@@ -1,6 +1,7 @@
 # Install OpenMPI
 
 ## Prerequisites
+
 1. The tarball of OpenMPI's source
 2. tar - an archiving utility
 3. root or sudo permission (optional)
@@ -55,7 +56,6 @@ source $HOME/.bashrc
 mpirun --version
 ```
 
-## Contact 
+## Contact
 
 Rangsiman Ketkaew - rangsiman1993@gmail.com
-

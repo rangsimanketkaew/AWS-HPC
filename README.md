@@ -8,7 +8,7 @@ This Github repository provides information about high performance computing (HP
 
 ## Getting started and quick launching AWS EC2 instance
 
-- [Creating your first compute node on AWS EC2](create-instance-on-aws-ec2.md)
+- [Creating your first compute node on AWS EC2](create-aws-ec2-instance.md)
 
 ## Initial creation and setup of AWS EC2 instance
 
