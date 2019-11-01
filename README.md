@@ -28,9 +28,9 @@ This Github repository provides all information about high performance computing
   - Configuring AWS ParallelCluster: master and worker nodes
 - Job scheduler
   - SGE
-    - [SGE job scheduling](job-scheduling.md)
-    - [Basic SGE command usage](basic-usage-of-sge.md)
-    - [Preparing and submitting the job on the cluster](prepare-sge-script.md)
+    - [SGE job scheduling](sge-job-scheduling.md)
+    - [Basic SGE command usage](sge-basic-usage.md)
+    - [Preparing and submitting the job on the cluster](sge-prepare-job-script.md)
   - AWSBATCH
   - SLURM
   - TORQUE
