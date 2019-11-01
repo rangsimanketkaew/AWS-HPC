@@ -4,20 +4,37 @@
 
 **Computational environment and Computational Chemistry on AWS EC2 platform.**
 
-*Platform of Interest: Red Hat, CentOS, and Ubuntu*
+This Github repository provides all information about high performance computing (HPC) and cluster management tools for AWS Parallel Cloud Cluster services: EC2, ParallelCluster, CloudFormation, EFX, S3, AutoScaling features.
 
 ## Resources
 
-- Initial setup of the AWS EC2 instance
+- Initial setup of AWS EC2 instance
   - AWS documentation
+- Create Linux distribution
+  - Red Hat
+  - CentOS
+  - Ubuntu
+- Create cloud cluster
+  - AWS CLI
+  - AWS ParallelCluster
+  - Master and worker nodes
+- Job scheduler
+  - SGE
+  - AWSBATCH
+  - SLURM
+  - TORQUE
+- Benchmarking performance of cluster
+  - LINPACK
+  - Evaluate the performance of parallel file system using IOR
 - Install development tools
   - GNU and GCC compilers
   - Intel Compiler
-  - Intel MKL library
+  - Intel Math Kernel Library (MKL)
 - Install massage passing interface (MPI) library
   - Intel MPI
   - OpenMPI
   - MPICH
+  - MVAPICH
 - Install accelerated library
   - NVIDIA driver
   - CUDA toolkit
@@ -26,14 +43,13 @@
   - ORCA
   - Gromacs
   - LAMMPS
-- Parallel cluster
-  - AWS Parallel Cluster
-  - Spot Instance
-- Job scheduler
-  - SGE
-  - AWSBATCH
-  - SLURM
-  - TORQUE
+
+## More to read
+
+I strongly recommend the following website/blog/forum!
+
+- https://aws-parallelcluster.readthedocs.io/en/latest/
+- https://github.com/aws/aws-parallelcluster
 
 ## Contact
 

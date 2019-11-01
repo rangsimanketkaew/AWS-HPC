@@ -186,7 +186,7 @@ job-ID  prior   name        user         state submit/start at     queue        
       1 0.55500 hello_job.s ec2-user     r     31/10/2019 20:25:38   XXX           16
 ```
 
-A few minute later AWS AutoScailing will launch the instance automatically.
+A few minute later AWS AutoScaling will launch the instance automatically.
 
 ```
 [ec2-user@ip-172-31-0-14 ~]$ qhost
@@ -203,7 +203,7 @@ ip-172-31-5-XXX         lx-amd64        2    1    1    2  0.08    3.7G  188.9M  
 ip-172-31-5-XX          lx-amd64        2    1    1    2  0.08    3.7G  189.0M     0.0     0.0
 ```
 
-Then, after 10 minutes, when the job is completed, the AutoScailing will terminate those compute nodes for you.
+Then, after 10 minutes, when the job is completed, the AutoScaling will terminate those compute nodes for you.
 
 ```
 [ec2-user@ip-172-31-0-14 ~]$ qhost
@@ -212,7 +212,7 @@ HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  
 global                  -               -    -    -    -     -       -       -       -       -
 ```
 
-_AutoScailing is a feature that can build and terminate the virtual instance and request CPU cores on-the-fly (whenever you need)._
+_AutoScaling is a feature that can build and terminate the virtual instance and request CPU cores on-the-fly (whenever you need)._
 
 ## More to read
 - Calculate the cost for your solution: https://calculator.aws
