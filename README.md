@@ -48,6 +48,7 @@ This Github repository provides information about high performance computing (HP
 
 - [Installing AWS CLI](install-aws-cli.md)
 - [Installing AWS ParallelCluster](install-aws-parallelcluster.md)
+- [Installing AWS CloudFormation Helper Scripts](install-cloudformation-helper-scripts.md)
 - [Creating virtual parallel cluster](create-parallel-cluster.md)
 - [Creating virtual parallel cluster with user-adjusted configuration](configure-parallelcluster-config.md)
 - Resizing worker nodes
