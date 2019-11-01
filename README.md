@@ -24,7 +24,7 @@ This Github repository provides all information about high performance computing
   - SLURM
   - TORQUE
 - Benchmarking performance of cluster
-  - LINPACK
+  - Measuring computer power using LINPACK
   - Evaluate the performance of parallel file system using IOR
 - Install development tools
   - GNU and GCC compilers
