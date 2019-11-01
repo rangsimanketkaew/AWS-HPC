@@ -30,6 +30,10 @@ This Github repository provides all information about high performance computing
   - GNU and GCC compilers
   - Intel Compiler
   - Intel Math Kernel Library (MKL)
+  - ATLAS
+  - BLAS
+  - LAPACK
+  - ScaLAPACK
 - Install massage passing interface (MPI) library
   - Intel MPI
   - OpenMPI
