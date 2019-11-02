@@ -53,7 +53,7 @@ This Github repository provides information about high performance computing (HP
 - [Creating virtual parallel cluster with user-adjusted configuration](configure-parallelcluster-config.md)
 - Resizing worker nodes
 
-## Job scheduler
+## Using job scheduler
 
 - SGE
   - [SGE job scheduling](sge-job-scheduling.md)
@@ -78,19 +78,19 @@ This Github repository provides information about high performance computing (HP
 - LAPACK
 - ScaLAPACK
 
-## Installing massage passing interface (MPI) library
+## Installing message passing interface (MPI) library
 
 - [Intel MPI](install-intel-library.md)
 - [OpenMPI](install-openmpi.md)
 - MPICH
 - MVAPICH
 
-## Installing accelerated library
+## Installing GPU-accelerated library
 
 - [NVIDIA driver](install-nvidia-driver-and-cuda-toolkit.md)
 - [CUDA toolkit](install-nvidia-driver-and-cuda-toolkit.md)
 
-## Installing chemistry program packages
+## Installing computational chemistry software
 
 - [NWChem](./nwchem)
   - [Installing with OpenMPI](nwchem/install-nwchem-openmpi.md)
@@ -106,7 +106,7 @@ This Github repository provides information about high performance computing (HP
 
 ## More to read
 
-I strongly recommend the following website/blog/forum!
+If you are interested in AWS cloud cluster service, then I strongly recommend you to read or visit the following website, blog, and forum!
 
 - https://aws-parallelcluster.readthedocs.io/en/latest/
 - https://github.com/aws/aws-parallelcluster
