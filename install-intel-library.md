@@ -23,7 +23,7 @@ sudo yum update && sudo yum install wget lsb gcc-c++ expect
 - Ubuntu
 
 ```
-
+sudo apt-get upgrade && sudo apt-get install wget lsb gcc expect
 ```
 
 ## Preparing package installer
