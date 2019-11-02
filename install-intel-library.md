@@ -5,6 +5,43 @@ Intel Parallel Studio XE suite
 - Intel Fortran compiler
 - Intel MKL
 - Intel MPI
+- Intel Distribution for Python (optional)
+
+## Prerequisites
+
+- Development tools
+- root or sudo permission (for global)
+
+## Installing development tools
+
+- Red Hat/CentOS
+
+```
+sudo yum update && sudo yum install wget lsb gcc-c++ expect
+```
+
+- Ubuntu
+
+```
+
+```
+
+## Preparing package installer
+
+- Download installer of Intel Parallel Studio XE suite or library from Intel software center
+- Untar the archive
+
+```
+tar –xvf <package_name>.tgz
+```
+
+Execute bash installer (.sh) and follow the onscreen instruction to complete installation 
+
+```
+sh ./<package_name>.sh
+```
+
+Installation can take 5 - 20 min depending on the packages to be installed
 
 ## Intel C++ and Fortran Compilers
 
@@ -40,6 +77,6 @@ cd l_mpi-rt_2018.2.199
 sudo ./install.sh
 ```
 
-## Contact 
+## Contact
 
 Rangsiman Ketkaew - rangsiman1993@gmail.com
