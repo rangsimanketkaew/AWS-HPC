@@ -66,6 +66,8 @@ sudo ./install.sh
 cp -r /shared/opt/intel/mkl/benchmarks/hpcg /home/centos/hpcg
 ```
 
+> FYI: [Intel Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor)
+
 ## Intel MPI
 
 1. Download software installer from https://registrationcenter.intel.com/RegCenter/ComForm.aspx?ProductID=1744.
