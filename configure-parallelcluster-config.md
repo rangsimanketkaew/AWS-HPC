@@ -2,19 +2,23 @@
 
 ## Prerequisite
 
-- AWS CLi
+Before creating the parallel cluster, you must install the following tools:
+
+- AWS CLI
 - AWS ParallelCluster
 
-## Step-by-step configuration of AWS parallelcluster
+If both AWS CLI and ParallelCluster are installed successfully, there must be configuration files called `config` at `$HOME/.aws/config` and at `$HOME/.parallelcluster/config`, respectively.
 
-1. Create a new file, for example called `config_new`, in a hidden `.parallelcluster` folder in your home directory, for example:
+## Step-by-step configuration (or reconfiguration) of AWS ParallelCluster
+
+1. Create a new file, for example, called `config_new`, in a hidden `.parallelcluster` folder in your home directory, for example:
 
 ```
-$ cd $HOME
-$ vi .parallelcluster/config_new
+cd $HOME
+vi .parallelcluster/config_new
 ```
 
-2. Append the following codes to config_new file and change the value for each configuration to your need.
+2. Append the following codes to `config_new` file and change the value for each configuration to your need.
 
 ```
 [global]
@@ -67,10 +71,12 @@ ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
 scaledown_idletime = 1
 ```
 
-1. You can now launch a new cluster using this new config file, like this:
+> Note: the `config_new` undoubtedly works for my cluster, but it might not work for you. Therefore, you should check if the value of each configuration setting is suitable with your system.
+
+3. You can now launch a new cluster using this new config file, like this:
 
 ```
-$ pcluster create new_cluster --config $HOME/.parallelcluster/config_new
+pcluster create new_cluster --config $HOME/.parallelcluster/config_new
 ```
 
 This step can take 5 - 30 min (depending on configuration)
