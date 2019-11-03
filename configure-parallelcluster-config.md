@@ -71,21 +71,23 @@ ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
 scaledown_idletime = 1
 ```
 
-> Note: the `config_new` undoubtedly works for my cluster, but it might not work for you. Therefore, you should check if the value of each configuration setting is suitable with your system.
+> Note 1: the `config_new` undoubtedly works for my cluster, but it might not work for you. Therefore, you should check if the value of each configuration setting is suitable with your system. </br>
+> Note 2: Adapted from the original config file provided by [EDGE's user guide](http://usr.dial3343.org/en/master/chapters/setup/cloud.html#sec-cloud-parallel-cluster).
 
 3. You can now launch a new cluster using this new config file, like this:
 
 ```
-pcluster create new_cluster --config $HOME/.parallelcluster/config_new
+cd $HOME
+pcluster create NAME_OF_CLUSTER --config .parallelcluster/config_new
 ```
 
-This step can take 5 - 30 min (depending on configuration)
+This step can take 1 - 30 min, depending on configuration setting.
 
----
+## More to read
 
-Documentation on configuration can be found at [this website](https://docs.aws.amazon.com/parallelcluster/latest/ug/configuration.html).
+I strongly recommand you to read the documentation before creating a serious cluster.
 
-Adapted from the original config file provided by [EDGE's user guide](http://usr.dial3343.org/en/master/chapters/setup/cloud.html#sec-cloud-parallel-cluster).
+Official AWS documentation on configuration of parallel cluster can be found at https://docs.aws.amazon.com/parallelcluster/latest/ug/configuration.html.
 
 ## Contact
 

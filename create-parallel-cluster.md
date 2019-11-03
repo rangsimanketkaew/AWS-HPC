@@ -2,7 +2,7 @@
 
 ## Parallel Cluster
 
-FYI: Virtual parallel cluster = Master node + Slave node(s)
+> FYI: Virtual parallel cluster = Master node + Slave node(s)
 
 _Note that the CnfCluster is obsoleted. If you are currently using CnfCluster, you can start using a new AWS ParallelCluster (pcluster) instead._
 
@@ -14,9 +14,11 @@ _Note that the CnfCluster is obsoleted. If you are currently using CnfCluster, y
 
 ## Let's create the cluster
 
-- Launch new cluster with default settings offered by AWS
+To create the cluster, you have two ways:
 
-By default, AWS ParallelCluster uses the file `~/.parallelcluster/config` for all configuration parameters.
+- Launch new cluster with default configuration settings
+
+By default, if no configuration file specified, AWS ParallelCluster will use the default file, `$HOME/.parallelcluster/config`, for all configuration parameters.
 
 ```
 (pcluster-virtenv) [duff@]$ pcluster create NAME_OF_CLUSTER
@@ -26,6 +28,11 @@ By default, AWS ParallelCluster uses the file `~/.parallelcluster/config` for al
 
 ```
 (pcluster-virtenv) [duff@]$ pcluster create NAME_OF_CLUSTER --config PATH_TO_CONFIG_FILE
+```
+
+Creation can take 1 - 30 min. If it is completed successfully (without any error messages), you should see output like thos:
+
+```
 Beginning cluster creation for cluster: NAME_OF_CLUSTER
 Creating stack named: parallelcluster-NAME_OF_CLUSTER
 Status: parallelcluster-NAME_OF_CLUSTER - CREATE_COMPLETE
@@ -33,8 +40,6 @@ MasterPublicIP: XXX.XXX.XXX.XXX
 ClusterUser: centos
 MasterPrivateIP: XXX.XXX.XXX.XXX
 ```
-
-Documentation on configuration can be found at [this website](https://docs.aws.amazon.com/parallelcluster/latest/ug/configuration.html).
 
 In addition, you can look at [this page](configure-parallelcluster-config.md) for more details on adjusting `config` file.
 

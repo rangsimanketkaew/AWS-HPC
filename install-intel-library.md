@@ -1,16 +1,25 @@
-# Install Intel Library
+# Install Intel Development Tools and Library
 
-Intel Parallel Studio XE suite
+Some important and frequently-used libraries:
+
 - Intel C++ compiler
 - Intel Fortran compiler
-- Intel MKL
-- Intel MPI
+- Intel Math Kernel Library (MKL)
+- Intel Message Passing Interface (MPI)
 - Intel Distribution for Python (optional)
+
+## FAQ
+
+> Q: Where can I find all Intel products? </br>
+> A: https://registrationcenter.intel.com/en/products/
+>
+> Q: Are they free? </br>
+> A: Yes, Intel is so generous. Student, teacher, open-source developer can download Intel Parallel Studio XE in free of charge!
 
 ## Prerequisites
 
-- Development tools
-- root or sudo permission (for global)
+- Basic development tools (`sudo yum group install "Development Tools"`)
+- root or sudo permission (for installation at global space)
 
 ## Installing development tools
 
@@ -23,25 +32,35 @@ sudo yum update && sudo yum install wget lsb gcc-c++ expect
 - Ubuntu
 
 ```
+sudo apt-get update
 sudo apt-get upgrade && sudo apt-get install wget lsb gcc expect
 ```
 
 ## Preparing package installer
 
-- Download installer of Intel Parallel Studio XE suite or library from Intel software center
-- Untar the archive
+1. Download installer of Intel Parallel Studio XE suite or library from Intel software center
+
+```
+wget <package_name>.tgz
+```
+
+2. Untar the archive
 
 ```
 tar –xvf <package_name>.tgz
 ```
 
-Execute bash installer (.sh) and follow the onscreen instruction to complete installation 
+3. Execute bash installer (.sh) and follow the onscreen instruction to complete installation 
 
 ```
 sh ./<package_name>.sh
 ```
 
-Installation can take 5 - 20 min depending on the packages to be installed
+_Installation can take 5 - 20 min, depending on the packages to be installed._
+
+---
+
+# Individual installation
 
 ## Intel C++ and Fortran Compilers
 
