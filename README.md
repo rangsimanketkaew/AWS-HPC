@@ -105,6 +105,10 @@ This Github repository provides information about high performance computing (HP
 - Gromacs
 - LAMMPS
 
+## Useful notes
+
+- [Copying file and folder between local computer and AWS instance](notes/copy-file-between-computers.md)
+
 ## More to read
 
 If you are interested in AWS cloud cluster service, then I recommend you to read or visit the following website, blog, and forum!
