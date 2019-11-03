@@ -44,6 +44,12 @@ This Github repository provides information about high performance computing (HP
 
 **Let's keep in mind downloading a new created key pair (.pem) before launching instance as you will not be able to download it again.**
 
+## Creating AMI image (optional)
+
+- Create AMI image
+- Launch new instance using created AMI image
+- Launch new parallel cluster using created AMI image
+
 ## Creating cloud cluster
 
 - [Installing AWS CLI](install-aws-cli.md)
