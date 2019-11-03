@@ -28,38 +28,37 @@ aws_region_name = us-east-1
 [cluster default]
 key_name = aws_parallel_cluster
 base_os = centos7
-##custom_ami =
-master_instance_type = c5.xlarge
+##custom_ami = NONE
+master_instance_type = c5.large
 compute_instance_type = c5.4xlarge
+initial_queue_size = 0
 master_root_volume_size = 30
 compute_root_volume_size = 30
-initial_queue_size = 0
 max_queue_size = 8
 min_queue_size = 0
-maintain_initial_size = false
+maintain_initial_size = true
 scheduler = sge
 cluster_type = spot
 placement_group = DYNAMIC
 placement = cluster
-ebs_settings = shared
-fsx_settings = fs
 vpc_settings = public
-##spot_bid_percentage =
-spot_price=0.5
-
-[ebs shared]
-shared_dir = neweq_shared
-volume_type = st1
-volume_size = 500
-
-[fsx fs]
-shared_dir = /fsx
-storage_capacity = 3600
-##imported_file_chunk_size = 1024
+ebs_settings = shared
+##fsx_settings = fs
+##spot_price=0.5
 
 [vpc public]
 vpc_id = vpc-XXXXXXXX
 master_subnet_id = subnet-XXXXXXXX
+
+[ebs shared]
+shared_dir = myshared
+volume_type = st1
+volume_size = 500
+
+##[fsx fs]
+##shared_dir = /fsx
+##storage_capacity = 3600
+##imported_file_chunk_size = 1024
 
 [aliases]
 ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
@@ -68,7 +67,7 @@ ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
 scaledown_idletime = 1
 ```
 
-3. You can now launch a new cluster using this new config file, like this:
+1. You can now launch a new cluster using this new config file, like this:
 
 ```
 $ pcluster create new_cluster --config $HOME/.parallelcluster/config_new
