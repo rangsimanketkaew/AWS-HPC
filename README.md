@@ -53,6 +53,12 @@ This Github repository provides information about high performance computing (HP
 - [Creating virtual parallel cluster with user-adjusted configuration](configure-parallelcluster-config.md)
 - Resizing worker nodes
 
+## Getting started parallel cluster
+
+- [First landing on the cluster](first-landing-on-the-cluster.md)
+- [Measuring computer power using LINPACK (benchmarking)](measure-computer-power.md)
+- Evaluating the performance of parallel file system using IOR
+
 ## Using job scheduler
 
 - SGE
@@ -62,11 +68,6 @@ This Github repository provides information about high performance computing (HP
 - AWSBATCH
 - SLURM
 - TORQUE
-
-## Benchmarking performance of cluster
-
-- Measuring computer power using LINPACK
-- Evaluating the performance of parallel file system using IOR
 
 ## Installing development tools
 
@@ -106,7 +107,7 @@ This Github repository provides information about high performance computing (HP
 
 ## More to read
 
-If you are interested in AWS cloud cluster service, then I strongly recommend you to read or visit the following website, blog, and forum!
+If you are interested in AWS cloud cluster service, then I recommend you to read or visit the following website, blog, and forum!
 
 - https://aws-parallelcluster.readthedocs.io/en/latest/
 - https://github.com/aws/aws-parallelcluster

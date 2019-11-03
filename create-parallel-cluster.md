@@ -49,7 +49,10 @@ In addition, you can look at [this page](configure-parallelcluster-config.md) fo
 
 ```
 (pcluster-virtenv) [duff@]$ pcluster list
-hello-cluster1
+c1  CREATE_COMPLETE  2.4.1
+c2  CREATE_COMPLETE  2.4.1
+c3  CREATE_COMPLETE  2.4.1
+c4  CREATE_COMPLETE  2.4.1
 ```
 
 ## Connect to the cluster
@@ -59,12 +62,6 @@ Use SSH to connect to the master node of the cluster:
 ```
 (pcluster-virtenv) [duff@]$ chmod 400 .ssh/YOUR_KEY_FILE.pem
 (pcluster-virtenv) [duff@]$ pcluster ssh NAME_OF_CLUSTER -i .ssh/YOUR_KEY_FILE.pem
-```
-
-Update the cluster with the latest change of configuration file:
-
-```
-(pcluster-virtenv) [duff@]$ pcluster update NAME_OF_CLUSTER -i .ssh/YOUR_KEY_FILE.pem
 ```
 
 Normal output should look like this:
@@ -83,72 +80,13 @@ Last login: XXX XX 20:12:12 2019
 https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
 ```
 
-## Show how many compute nodes are running out there
+## Update the cluster
 
-What is you use SGE as a job scheduler, you can use `qhost` commmand to show all running compute nodes
-
-```
-[ec2-user@ip-172-31-0-14 ~]$ qhost
-HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  SWAPTO  SWAPUS
-----------------------------------------------------------------------------------------------
-global                  -               -    -    -    -     -       -       -       -       -
-ip-172-31-10-XX         lx-amd64        2    1    1    2  0.02    3.7G  156.2M     0.0     0.0
-ip-172-31-10-XX         lx-amd64        2    1    1    2  0.02    3.7G  156.8M     0.0     0.0
-```
-
-## Testing
-
-1. Create a file called hello_job.sh
+Update the cluster with the latest change of configuration file:
 
 ```
-#!/bin/bash
-sleep 30
-echo "Hello World from $(hostname)"
+(pcluster-virtenv) [duff@]$ pcluster update NAME_OF_CLUSTER -i .ssh/YOUR_KEY_FILE.pem
 ```
-
-2. Submit a simple `hello_job.sh` job that will show the AutoScaling feature of ParallelCluster using the SGE, for example:
-
-```
-[ec2-user@ip-172-31-0-14 ~]$ qsub -pe mpi 16 hello_job.sh
-Your job 1 ("hello_job.sh") has been submitted
-```
-
-3. Use `qstat` command to show the status of a submitted job:
-
-```
-[ec2-user@ip-172-31-0-14 ~]$ qstat
-job-ID  prior   name        user         state submit/start at     queue           slots ja-task-ID
----------------------------------------------------------------------------------------------------
-      1 0.55500 hello_job.s ec2-user     r     31/10/2019 20:25:38   XXX           16
-```
-
-A few minute later AWS AutoScaling will launch the instance automatically.
-
-```
-[ec2-user@ip-172-31-0-14 ~]$ qhost
-HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  SWAPTO  SWAPUS
-----------------------------------------------------------------------------------------------
-global                  -               -    -    -    -     -       -       -       -       -
-ip-172-31-0-XX          lx-amd64        2    1    1    2  0.11    3.7G  189.0M     0.0     0.0
-ip-172-31-10-XX         lx-amd64        2    1    1    2  0.29    3.7G  189.2M     0.0     0.0
-ip-172-31-14-XX         lx-amd64        2    1    1    2  0.11    3.7G  189.1M     0.0     0.0
-ip-172-31-2-XX          lx-amd64        2    1    1    2  0.06    3.7G  189.4M     0.0     0.0
-ip-172-31-3-XXX         lx-amd64        2    1    1    2  0.11    3.7G  185.5M     0.0     0.0
-ip-172-31-4-XXX         lx-amd64        2    1    1    2  0.11    3.7G  186.2M     0.0     0.0
-ip-172-31-5-XXX         lx-amd64        2    1    1    2  0.08    3.7G  188.9M     0.0     0.0
-ip-172-31-5-XX          lx-amd64        2    1    1    2  0.08    3.7G  189.0M     0.0     0.0
-```
-
-Then, after 10 minutes, when the job is completed, the AutoScaling will terminate those compute nodes for you.
-
-```
-[ec2-user@ip-172-31-0-14 ~]$ qhost
-HOSTNAME                ARCH         NCPU NSOC NCOR NTHR  LOAD  MEMTOT  MEMUSE  SWAPTO  SWAPUS
-----------------------------------------------------------------------------------------------
-global                  -               -    -    -    -     -       -       -       -       -
-```
-
-_AutoScaling is a feature that can build and terminate the virtual instance and request CPU cores on-the-fly (whenever you need)._
 
 ## More to read
 - Calculate the cost for your solution: https://calculator.aws
