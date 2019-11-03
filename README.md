@@ -113,6 +113,7 @@ This Github repository provides information about high performance computing (HP
 
 ## Useful notes
 
+- [Useful AWS CLI commands](notes/useful-aws-cli-commands.md)
 - [Copying file and folder between local computer and AWS instance](notes/copy-file-between-computers.md)
 
 ## More to read
