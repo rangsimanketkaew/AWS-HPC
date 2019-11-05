@@ -71,7 +71,7 @@ This Github repository provides information about high performance computing (HP
   - [SGE job scheduling](sge/sge-job-scheduling.md)
   - [Basic SGE command usage](sge/sge-basic-usage.md)
   - [Preparing and submitting the job on the cluster](sge/sge-prepare-job-script.md)
-  - [Example of script for running NWChem on the cluster]
+  - [Intel job script for running NWChem](sge/sge-running-nwchem-intel.md)
 - AWSBATCH
 - SLURM
 - TORQUE
