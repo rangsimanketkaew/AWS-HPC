@@ -18,7 +18,7 @@
 | $pe_hostfile | the path to a file written by Grid Engine which contains information about how and where the parallel job should be run |
 | $host | the host on which the parallel environment is being started |
 | $job_owner | the name of the user who owns the parallel job |
-| $job_id | the id of the parellel job |
+| $job_id | the id of the parallel job |
 | $job_name | the name of the parallel job |
 | $pe | the name of the parallel environment | 
 | $pe_slots | the number of job slots assigned to the job |
