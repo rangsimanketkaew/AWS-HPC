@@ -24,6 +24,8 @@
 | $pe_slots | the number of job slots assigned to the job |
 | $queue | the name of the queue in which the parallel job is running |
 
+[Click here for more details and comprehensive environment variables of SGE](https://www.ace-net.ca/wiki/Sun_Grid_Engine)
+
 ## Contact 
 
 Rangsiman Ketkaew - rangsiman1993@gmail.com
