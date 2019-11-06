@@ -50,7 +50,7 @@ wget <package_name>.tgz
 tar –xvf <package_name>.tgz
 ```
 
-3. Execute bash installer (.sh) and follow the onscreen instruction to complete installation 
+3. Execute bash installer (.sh) and follow the onscreen instruction to complete installation
 
 ```
 sh ./<package_name>.sh
@@ -58,9 +58,25 @@ sh ./<package_name>.sh
 
 _Installation can take 5 - 20 min, depending on the packages to be installed._
 
+FYI: Compilers info
+
+| Language | Developer | Command | MPI  | OpenMP |
+|----------|-----------|---------|------|--------|
+| Fortran 77 | GNU | gfortran | mpif77 | gfortran -fopenmp |
+| Fortran 90/95/03 | GNU | gfortran | mpif90 | gfortran -fopenmp |
+| C | GNU | gcc (cc) | mpicc | gcc -fopenmp |
+| C++ | GNU | g++ (c++) | mpicxx (mpic++, mpiCC) | g++ -fopenmp |
+| Fortran 77 | PGI | pgfortran (pgf77) | mpif77 | pgfortran -mp |
+| Fortran 90/95/03 | PGI | pgfortran (pgf90, pgf95) | mpif90 | pgfortran -mp |
+| C | PGI | pgcc | mpicc | pgcc -mp |
+| C++ | PGI | pgc++ | mpicxx (mpic++, mpiCC) | pgc++ -mp |
+| Fortran 77/90/95/03 | Intel | ifort | mpifort (mpif90, mpif77) | ifort -openmp |
+| C | Intel | icc | mpicc | icc -openmp |
+| C++ | Intel | icpc | mpicxx (mpic++, mpiCC) | icpc -openmp |
+
 ---
 
-# Individual installation
+# Intel Library installation
 
 ## Intel C++ and Fortran Compilers
 
