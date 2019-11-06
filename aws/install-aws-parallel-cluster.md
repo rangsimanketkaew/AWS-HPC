@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-1. Virtualenv
+1. Virtualenv (optional)
 2. AWS CLI
 
 - Install aws-parallelcluster
@@ -15,7 +15,14 @@
 Successfully installed aws-parallelcluster-2.4.1 ...
 ```
 
-- When it's completed, let's configure the cluster
+You can check if aws-parallelcluster is installed successfully.
+
+```
+(pcluster-virtenv) [duff]$ pcluster version
+2.4.1
+```
+
+- Next, set configure settings for launching the cluster
 
 ```
 (pcluster-virtenv) [duff@]$ pcluster configure
@@ -55,6 +62,14 @@ Acceptable Values for Master Subnet ID:
     subnet-abcdefghigjlmnop5
     subnet-abcdefghigjlmnop6
 Master Subnet ID []: subnet-abcdefghigjlmnop1
+```
+
+The `config` file will be created at `$HOME/.parallelcluster/config`.
+
+- Now you can try creating the cluster using `create` option and pcluster will take configure settings from the config file.
+
+```
+pcluster create mycluster
 ```
 
 ## Contact

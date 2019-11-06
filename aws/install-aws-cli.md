@@ -2,11 +2,21 @@
 
 ## Prerequisites
 
-1. Virutalenv
+1. Virtualenv (optional)
 
-## Let's go
+## Install AWS CLI
 
-1. Open Linux terminal and run the following scripts:
+1. Activate to a virtual environment (skipp this step if you do not use virtualenv)
+
+2. Open Linux terminal and run the following command:
+
+```
+(pcluster-virtenv) [duff]$ pip install --upgrade awscli
+```
+
+## Configure AWS CLI
+
+1. Run the following scripts to set configure settings and create `config` file. 
 
 ```
 (pcluster-virtenv) [duff]$ pip install --upgrade awscli
@@ -19,7 +29,11 @@ Default output format []: json
 make_bucket: duff-parallelcluster 
 ```
 
-2. A created `config` file is available at `$HOME/.aws/`
+2. Created `config` file will be available at `$HOME/.aws/`
+
+```
+ls $HOME/.aws/config
+```
 
 ## Contact
 
