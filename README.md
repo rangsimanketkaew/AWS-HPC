@@ -15,10 +15,13 @@ This Github repository provides information about high performance computing (HP
 - Amazon Simple Storage Service (S3)
 - Amazon AutoScaling
 
+**Note that these notes should be read from top to bottom.**
+
 ## Getting started and quick launching AWS EC2 instance
 
 - [What is AWS EC2?](https://www.google.com/search?q=what+is+aws+ec2&rlz=1C1CHBF_enTH823TH823&oq=what+is+AWS+EC2)
 - [Creating your first compute node on AWS EC2](aws/create-aws-ec2-instance.md)
+- [Youtube: Instances In AWS | How To Create AWS EC2 Instance | AWS EC2 Tutorial | Edureka](https://www.youtube.com/watch?v=FXvlq89Ph_4) and complete video list is [here](https://www.youtube.com/playlist?list=PL9ooVrP1hQOFWxRJcGdCot7AgJu29SVV3).
 
 ## Initial creation and setup of AWS EC2 instance
 
@@ -56,14 +59,14 @@ This Github repository provides information about high performance computing (HP
 - [Installing AWS ParallelCluster](aws/install-aws-parallel-cluster.md)
 - [Installing AWS CloudFormation Helper Scripts](aws/install-aws-cloudformation-helper-scripts.md)
 - [Creating virtual parallel cluster](aws/create-aws-parallel-cluster.md)
-- [Creating virtual parallel cluster with user-adjusted configuration](aws/configure-aws-parallel-cluster-config.md)
+- [Creating virtual parallel cluster with user-adjusted configuration](aws/configure-aws-parallel-cluster.md)
 - Resizing worker nodes
 
 ## Getting started parallel cluster
 
 - [First landing on the cluster](first-landing-on-the-cluster.md)
-- [Measuring computer power using LINPACK (benchmarking)](measure-computer-power.md)
-- Evaluating the performance of parallel file system using IOR
+- [Measuring computer power using LINPACK (benchmarking)](measure-computer-power.md) (optional)
+- Evaluating the performance of parallel file system using IOR (optional)
 
 ## Using job scheduler
 

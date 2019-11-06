@@ -1,4 +1,4 @@
-# Job Scheduling
+# SGE Job Scheduling
 
 ## List of compute nodes
 
