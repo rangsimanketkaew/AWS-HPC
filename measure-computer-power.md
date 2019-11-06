@@ -1,4 +1,4 @@
-# Measuring computer power
+# Measure computer power
 
 ## Test and Benchmark using LINPACK
 

@@ -18,7 +18,7 @@ This Github repository provides information about high performance computing (HP
 ## Getting started and quick launching AWS EC2 instance
 
 - [What is AWS EC2?](https://www.google.com/search?q=what+is+aws+ec2&rlz=1C1CHBF_enTH823TH823&oq=what+is+AWS+EC2)
-- [Creating your first compute node on AWS EC2](create-aws-ec2-instance.md)
+- [Creating your first compute node on AWS EC2](aws/create-aws-ec2-instance.md)
 
 ## Initial creation and setup of AWS EC2 instance
 
@@ -52,11 +52,11 @@ This Github repository provides information about high performance computing (HP
 
 ## Creating cloud cluster
 
-- [Installing AWS CLI](install-aws-cli.md)
-- [Installing AWS ParallelCluster](install-aws-parallelcluster.md)
-- [Installing AWS CloudFormation Helper Scripts](install-cloudformation-helper-scripts.md)
-- [Creating virtual parallel cluster](create-parallel-cluster.md)
-- [Creating virtual parallel cluster with user-adjusted configuration](configure-parallelcluster-config.md)
+- [Installing AWS CLI](aws/install-aws-cli.md)
+- [Installing AWS ParallelCluster](aws/install-aws-parallel-cluster.md)
+- [Installing AWS CloudFormation Helper Scripts](aws/install-aws-cloudformation-helper-scripts.md)
+- [Creating virtual parallel cluster](aws/create-aws-parallel-cluster.md)
+- [Creating virtual parallel cluster with user-adjusted configuration](aws/configure-aws-parallel-cluster-config.md)
 - Resizing worker nodes
 
 ## Getting started parallel cluster

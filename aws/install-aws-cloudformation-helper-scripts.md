@@ -1,4 +1,4 @@
-# Install CloudFormation Helper Scripts
+# Install AWS CloudFormation Helper Scripts
 
 ## Prerequisite
 
