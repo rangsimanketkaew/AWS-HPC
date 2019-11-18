@@ -1,4 +1,4 @@
-# Install NWChem with OpenMPI
+# Install NWChem with OpenMPI & GPU enabled
 
 ## Prerequisites
 1. Ubuntu (version 14.04 or higher)
