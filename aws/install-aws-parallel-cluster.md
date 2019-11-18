@@ -5,7 +5,9 @@
 1. AWS CLI
 2. Virtualenv (optional)
 
-- Install aws-parallelcluster
+## Let's start!
+
+1. Install aws-parallelcluster
 
 ```
 (pcluster-virtenv) [duff]$ pip install aws-parallelcluster
@@ -22,13 +24,13 @@ You can check if aws-parallelcluster is installed successfully.
 2.4.1
 ```
 
-- Next, set configure settings for launching the cluster
+2. Next, set configure settings for launching the cluster
 
 ```
 (pcluster-virtenv) [duff@]$ pcluster configure
 Cluster Template [default]:
-AWS Access Key ID []:  <blank>
-AWS Secret Access Key ID []: <blank>
+AWS Access Key ID []:  YOUR_AWS_ACCESS_KEY_ID
+AWS Secret Access Key ID []: YOUR_AWS_SECRET_ACCESS_KEY_ID
 Acceptable Values for AWS Region ID:
     us-east-1
     us-east-2
@@ -64,13 +66,26 @@ Acceptable Values for Master Subnet ID:
 Master Subnet ID []: subnet-abcdefghigjlmnop1
 ```
 
-The `config` file will be created at `$HOME/.parallelcluster/config`.
+So far, there should be a small file called `config` created at `$HOME/.parallelcluster/config`. ParallelCluster uses this file by default for all configuration parameters for creating a cluster.
 
-- Now you can try creating the cluster using `create` option and pcluster will take configure settings from the config file.
+3. Now you can try creating the cluster using `pcluster` with `create` option.
 
 ```
-pcluster create mycluster
+(pcluster-virtenv) [duff]$ pcluster create mycluster
+...
+... This can take 30 second - up to 30 min depending of the how configuration parameters are complicated.
+...
+... output snipped...
+...
 ```
+
+4. Optional: to create a serious cluster for production work, you may have to edit/adjust the `config` file. You can create a new config file and change the location of the config file via the `--config` command option, e.g.
+
+```
+(pcluster-virtenv) [duff]$ pcluster create mycluster --config $HOME/.parallelcluster/my_new_config
+```
+
+An example configuration file can be found at [configure-aws-parallel-cluster](configure-aws-parallel-cluster.md).
 
 ## Contact
 
