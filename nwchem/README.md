@@ -53,6 +53,27 @@ Example of Bash script for compiling and installing NWChem 6.8.1 on different Li
 
 where `$NWCHEM_TOP` and `$NWCHEM_TARGET` are environment variables that define the top directory of `nwchem-6.8.1` and platform of machine such as `LINUX64`.
 
+### Running NWChem
+
+- Normal running command
+
+```
+mpirun -np N -ppn M /full/path/to/nwchem input.nw >& output.out &
+```
+
+- Running command with Casper
+
+```
+export NWCHEM_CASLIB=/full/path/to/casper/lib
+
+mpirun -np N -ppn M -genv CSP_NG 1 -genv LD_PRELOAD $NWCHEM_CASLIB/libcasper.so \
+        /full/path/to/nwchem input.nw >& output.out
+```
+
+where N is the total number of MPI processes and M is the total number of MPI processes per node.
+
+*Note that casper can be used with only ARMCI method in order to speed up the calculation.*
+
 ## Contact
 
 Rangsiman Ketkaew - rangsiman1993@gmail.com
