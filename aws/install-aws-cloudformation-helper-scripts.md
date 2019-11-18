@@ -5,6 +5,8 @@
 - Linux distribution other than Amazon Linux AMI image
 - root or sudo permission
 
+Following commands are to install AWS CloudFormation Helper scripts on Red Hat/ CentOS distro.
+
 ```
 sudo yum update -y
 sudo yum install -y epel-release
@@ -19,4 +21,4 @@ ls /opt/aws/bin/
 
 ## Contact
 
-Rangsiman Ketkaew - rangsiman1003@gmail.com
+Rangsiman Ketkaew - rangsiman1993@gmail.com
