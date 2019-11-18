@@ -4,14 +4,18 @@
 
 ## NWChem Packages
 
-  All NWChem runtimes will be built by using Intel Parallel Studio XE.
+  All NWChem runtimes are built by Intel MPI, OpenMPI, MPICH, MVAPICH2, and Intel MKL library.
 
-Module  | Description
---------|-------------
-NWChem + OpenIB                 | small calculation
-NWChem + ARMCI Casper           | medium & large calculations
-NWChem + ARMCI MPI-PR           | medium & large calculations  
-NWchem + ARMCI MPI-PR + Casper  | medium & large calculations
+NWChem Module  | Description
+---------------|-------------
+NWChem                         | small calculation
+NWChem + OpenIB                | small & medium calculations
+NWChem + OpenIB                | small & medium calculations
+NWChem + MPI-TS                | medium & large calculations
+NWChem + ARMCI + Casper        | medium & large calculations
+NWChem + MPI-PR                | medium & large calculations  
+NWChem + MPI-PR + Casper       | medium & large calculations
+NWChem + MPI-PR + Casper + GPU | medium & large CCSD calculations
 
 ## Recommendation
 
@@ -19,9 +23,10 @@ NWchem + ARMCI MPI-PR + Casper  | medium & large calculations
 Sensible value of CPU cores is like 2, 4, 8, 16, 24, 32, 48, 64, and 96.
 Suitable memory (per process) is like 100 MB, 500 MB, and 1000 MB or 1 GB.
 
-For example,
+For example:
+
 ```
-memory total 1000 stack 600 mb heap 50 mb global 450 mb"
+memory total 1000 mb stack 600 mb heap 50 mb global 450 mb
 ```
 
 ## Normal Usage
