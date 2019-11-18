@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-1. Virtualenv (optional)
-2. AWS CLI
+1. AWS CLI
+2. Virtualenv (optional)
 
 - Install aws-parallelcluster
 
