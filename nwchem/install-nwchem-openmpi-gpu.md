@@ -3,11 +3,13 @@
 ## Prerequisites
 1. Ubuntu (version 14.04 or higher)
 2. NWChem source code (6.8.1 or higher)
-3. OpenMPI (version 1.6.x - 3.x.x)
-4. Python (version 2.6 or 2.7)
-5. NVIDIA driver*
-6. CUDA toolkit*
-7. root or sudo permission (needed for installation at global directory)
+3. GNU compiler (gcc and gfortran)
+4. OpenBLAS
+5. OpenMPI (version 1.6.x - 3.x.x)
+6. Python (version 2.6 or 2.7)
+7. NVIDIA driver*
+8. CUDA toolkit*
+9. root or sudo permission (needed for installation at global directory)
 
 \* = required to enable the compilation of CUDA code for coupled-cluster method
 
@@ -53,7 +55,7 @@ sudo apt -y install libopenmpi-dev
 
 5. Create a bash (or tcsh) script called, e.g., *install-nwchem-openmpi-gpu.sh*
 ```
-vi install-nwchem-openmpi-gnu.sh
+vi install-nwchem-openmpi-gpu.sh
 ```
 
 6. Add the following commands to the newly created script. However, you can tweak the script as you need.
@@ -139,10 +141,13 @@ make
 
 For more information please visit https://www-lb.open-mpi.org/faq/?category=mpi-removed.
 
-7. Execute the script to start installation. This can take 20-30 minutes, depending on the performance of compiler and system.
+7. Execute the script to start installation.
+
 ```
 ./install-nwchem-openmpi-gpu.sh
 ```
+
+This can take 20 - 30 minutes depending on the performance of compiler and system.
 
 8. If it is done without any error, the executable binary file can be found at `$NWCHEM_TOP/bin/LINUX64/nwchem`. For example,
 
