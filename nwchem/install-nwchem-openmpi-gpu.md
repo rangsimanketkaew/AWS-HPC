@@ -3,7 +3,7 @@
 ## Prerequisites
 1. Ubuntu (version 14 or higher)
 2. NWChem source code
-3. OpenMPI
+3. OpenMPI (4.0 or higher)
 4. NVIDIA graphic card*
 5. NVIDIA driver*
 6. CUDA toolkit*
