@@ -39,9 +39,9 @@ Please note that on the day of this writing the latest version of NWChem is 6.8.
 Example of Bash script for compiling and installing NWChem 6.8.1 on different Linux distributions:
 
 1. CentOS 7
-2. CentOS 8 with ARMCI=MPI-PR
-3. CentOS 7 with GPU
-4. CentOS 7 with GPU and ARMCI=MPI-PR
+2. CentOS 7 with GPU
+3. CentOS 7 with GPU and ARMCI=MPI-PR
+4. CentOS 8 with GPU and ARMCI=MPI-PR
 5. Ubuntu 18.04
 6. Ubuntu 18.04 with GPU
 
