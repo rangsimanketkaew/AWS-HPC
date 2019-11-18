@@ -7,18 +7,18 @@ Before creating the parallel cluster, you must install the following tools:
 - AWS CLI
 - AWS ParallelCluster
 
-If both AWS CLI and ParallelCluster are installed successfully, there must be configuration files called `config` at `$HOME/.aws/config` and at `$HOME/.parallelcluster/config`, respectively.
+> FYI: If both AWS CLI and ParallelCluster are installed successfully, normally there must be two configuration files at `$HOME/.aws/config` and at `$HOME/.parallelcluster/config`, respectively.
 
 ## Step-by-step configuration (or reconfiguration) of AWS ParallelCluster
 
-1. Create a new file, for example, called `config_new`, in a hidden `.parallelcluster` folder in your home directory, for example:
+1. Create a new configuration file, for example, called `config_new`, in a hidden `.parallelcluster` folder in your home directory, like this:
 
 ```
 cd $HOME
 vi .parallelcluster/config_new
 ```
 
-2. Append the following codes to `config_new` file and change the value for each configuration to your need.
+2. Append the following codes to the `config_new` file and change the configuration parameter and value to your need.
 
 ```
 [global]
@@ -71,17 +71,17 @@ ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
 scaledown_idletime = 1
 ```
 
-> Note 1: the `config_new` undoubtedly works for my cluster, but it might not work for you. Therefore, you should check if the value of each configuration setting is suitable with your system. </br>
+> Note 1: the `config_new` undoubtedly works for my cluster, but it might not work for you. Therefore, you should check if the value of each configuration parameter is suitable with your system. </br>
 > Note 2: Adapted from the original config file provided by [EDGE's user guide](http://usr.dial3343.org/en/master/chapters/setup/cloud.html#sec-cloud-parallel-cluster).
 
-3. You can now launch a new cluster using this new config file, like this:
+3. You can now launch a new cluster using this config_new file, for example:
 
 ```
 cd $HOME
 pcluster create NAME_OF_CLUSTER --config .parallelcluster/config_new
 ```
 
-This step can take 1 - 30 min, depending on configuration setting.
+This step can take 1 - 30 min depending on configuration parameters.
 
 ## More to read
 
