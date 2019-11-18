@@ -2,7 +2,7 @@
 
 ## Show how many compute nodes are running out there
 
-What is you use SGE as a job scheduler, you can use `qhost` command to show all running compute nodes
+Suppose that you are using SGE as a job scheduler, you can use `qhost` command to show all running compute nodes
 
 ```
 [ec2-user@ip-172-31-0-14 ~]$ qhost
