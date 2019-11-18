@@ -1,27 +1,26 @@
 # Install NWChem with OpenMPI
 
 ## Prerequisites
-1. Ubuntu (version 14 or higher)
-2. NWChem source code
+1. Ubuntu (version 14.04 or higher)
+2. NWChem source code (6.8.1 or higher)
 3. OpenMPI (version 1.6.x - 3.x.x)
-4. NVIDIA graphic card*
+4. Python (version 2.6 or 2.7)
 5. NVIDIA driver*
 6. CUDA toolkit*
 7. root or sudo permission (needed for installation at global directory)
 
-*Note that the latest stable version of NWChem of this writing is 6.8.1*
-
-\* = To enable the compilation of CUDA code for coupled-cluster method
+\* = required to enable the compilation of CUDA code for coupled-cluster method
 
 ## Step-by-step installation instruction
 
 1. Install all dependencies
 ```
-sudo apt -y install mpi-default-bin libgfortran4 libopenblas-base \
+sudo apt -y install gfortran libgfortran4 mpi-default-bin libopenblas-base \
 libopenmpi2 libscalapack-openmpi2.0 openmpi-bin libquadmath0 \
 libfabric1 libhwloc5 libibverbs1 libpsm-infinipath1 \
 openmpi-common libhwloc-plugins libnl-route-3-200 \
-ocl-icd-libopencl1  librdmacm1
+ocl-icd-libopencl1  librdmacm1 \
+python-dev tcsh make
 ```
 
 > Note that the above command will install OpenMPI version 2.1.1 (on the day of writing).
@@ -37,22 +36,22 @@ wget https://github.com/nwchemgit/nwchem/releases/download/6.8.1-release/nwchem-
 tar -xvf nwchem-6.8.1-release.revision-v6.8-133-ge032219-src.2018-06-14.tar.bz2
 ```
 
-4. Execute `$HOME/nwchem-6.8.1/src/tools/guess-mpidefs` script to find the MPI library and suitable MPI environment variable.
+4. As `MPI_LIB`, `MPI_INCLUDE`, and `LIBMPI` parameters are not fixed (it depends on the environment of the system). Execute `$HOME/nwchem-6.8.1/src/tools/guess-mpidefs` shell script to get the suitable MPI libraries.
 
 ```
-./nwchem-6.8.1/src/tools/guess-mpidefs
+./home/ubuntu/nwchem-6.8.1/src/tools/guess-mpidefs
 export MPI_INCLUDE="/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/lib"
 export MPI_LIB="/usr//lib -L/usr/lib/x86_64-linux-gnu/openmpi/lib"
 export LIBMPI="-I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/x86_64-linux-gnu/openmpi/lib -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi"
 ```
 
-If `guess-mpidefs` cannot find the MPI library, maybe `mpif90` command is not installed yet. So you can use the following command to install mpif90
+In case `guess-mpidefs` cannot find the MPI libraries, maybe `mpif90` command is not yet installed on your system. So you can use the following command to install mpif90
 
 ```
 sudo apt -y install libopenmpi-dev
 ```
 
-5. Create a bash (or tcsh) script called, e.g., **install-nwchem-openmpi-gpu.sh**
+5. Create a bash (or tcsh) script called, e.g., *install-nwchem-openmpi-gpu.sh*
 ```
 vi install-nwchem-openmpi-gnu.sh
 ```
@@ -92,11 +91,10 @@ export EACCSD=y
 export USE_MPI=y
 export USE_MPIF=y
 export USE_MPIF4=y
-export MPI_LOC=/usr/local/
-#export MPI_LIB=/usr/local/lib
-#export MPI_INCLUDE=/usr/local/include
-#export LIBMPI="-lmpi_usempi -lmpi_mpifh -lmpi"
-#export LIBMPI="-lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi"
+# output of guess-mpidefs script.
+export MPI_INCLUDE="/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/lib"
+export MPI_LIB="/usr//lib -L/usr/lib/x86_64-linux-gnu/openmpi/lib"
+export LIBMPI="-I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/x86_64-linux-gnu/openmpi/lib -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi"
 ## ---------------------- Math library --------------------------------
 export HAS_BLAS=yes
 export BLASOPT="-lopenblas -lpthread -lrt"
@@ -114,11 +112,9 @@ export CUDA_INCLUDE="-I. -I/usr/local/cuda-10.1/include/"
 cd $NWCHEM_TOP/src
 
 make nwchem_config
-make 64_to_32
-make
+make 64_to_32 >& make_64to32.log
+make FC=gfortran >& make.log
 ```
-
-> I comment the `MPI_LIB`, `MPI_INCLUDE`, and `LIBMPI` because these environment variables are not fixed. It depends on the environment of the system. To find 
 
 **Very important note for OpenMPI version 4.0 or higher**
 
