@@ -77,7 +77,7 @@ So far, there should be a small file called `config` created at `$HOME/.parallel
 ...
 ```
 
-*Note that this can take 30 second - up to 30 min depending on the how configuration parameters are complicated.*
+*Note that this can take 30 second - up to 30 min depending on how configuration parameters are complicated.*
 
 4. Optional: to create a serious cluster for production work, you may have to edit/adjust the `config` file. You can create a new config file and change the location of the config file via the `--config` command option, e.g.
 
