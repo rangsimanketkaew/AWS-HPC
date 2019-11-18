@@ -77,6 +77,8 @@ This Github repository provides information about high performance computing (HP
   - [Intel job script for running NWChem](sge/sge-running-nwchem-intel.md)
 - AWSBATCH
 - SLURM
+  - [Script for running with distributed memory](slurm/slurm-nwchem-distributed-casper.sh)
+  - [Script for running with hybrid memory](slurm/slurm-nwchem-hybrid-casper.sh)
 - TORQUE
 
 ## Installing development tools
@@ -94,7 +96,7 @@ This Github repository provides information about high performance computing (HP
 - [Intel MPI](install-intel-library.md)
 - [OpenMPI](install-openmpi.md)
 - MPICH
-- MVAPICH
+- MVAPICH2
 
 ## Installing GPU-accelerated library
 
