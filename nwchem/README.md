@@ -47,9 +47,18 @@ Example of Bash script for compiling and installing NWChem 6.8.1 on different Li
 
 ### Let's compile and install NWChem
 
-1. Execute the install bash script
-2. Wait for 20 - 40 min (depending on configuration setting and system performance)
-3. NWChem executable binary will be created at $NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem
+1. Create and execute the install (bash) script with MPI on your system
+   - [OpenMPI on Ubuntu](install-nwchem-openmpi.md)
+   - [OpenMPI + GPI on Ubuntu](install-nwchem-openmpi-gpu.md)
+   - OpenMPI on Red Hat/CentOS
+   - Intel MPI on Red Hat/CentOS
+   - Intel MPI + GPU on Red Hat/CentOS
+   - MPICH MPI on Red Hat/CentOS
+   - MPICH MPI + GPU on Red Hat/CentOS
+   - MVAPICH2 MPI on Red Hat/CentOS
+   - MVAPICH2 MPI + GPU on Red Hat/CentOS
+2. Wait for 20 - 40 min - depending on configuration setting, compiler and system performance
+3. NWChem executable binary will be created at `$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem`
 
 where `$NWCHEM_TOP` and `$NWCHEM_TARGET` are environment variables that define the top directory of `nwchem-6.8.1` and platform of machine such as `LINUX64`.
 
