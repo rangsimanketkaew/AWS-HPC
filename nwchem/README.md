@@ -74,6 +74,16 @@ where N is the total number of MPI processes and M is the total number of MPI pr
 
 *Note that casper can be used with only ARMCI method in order to speed up the calculation.*
 
+## Submitting NWChem job to the cluster by SGE and SLURM
+
+- SGE
+
+[SGE scripts for submitting NWChem jobs](../sge)
+
+- SLURM
+
+[SLURM scripts for submitting NWChem jobs](../slurm)
+
 ## Contact
 
 Rangsiman Ketkaew - rangsiman1993@gmail.com
