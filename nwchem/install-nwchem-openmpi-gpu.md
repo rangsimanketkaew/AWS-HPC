@@ -63,10 +63,10 @@ vi install-nwchem-openmpi-gpu.sh
 #!/bin/bash
 
 # Install NWChem with parallel method and GPU on AWS EC2 system.
-# Ubuntu OS
-# Compile with GNU compiler and OpenMPI v.4.0.
-# GNU BLAS
-# NVIDIA CUDA
+# Ubuntu OS version 14.10 or higher
+# Compile with GNU compiler and OpenMPI version 1.6.x - 3.x.x.
+# GNU OpenBLAS
+# NVIDIA driver and CUDA toolkit
  
 export NWCHEM_TOP=/home/ubuntu/nwchem-6.8.1/
 
