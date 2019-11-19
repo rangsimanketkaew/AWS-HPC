@@ -1,6 +1,20 @@
 # CompEnv-AWS-EC2
 
-![aws-logo](images/1200px-Amazon_Web_Services_Logo.svg.png)
+</br>
+
+<div class="row">
+  <div class="column">
+    <img src="images/1200px-Amazon_Web_Services_Logo.svg.png" alt="aws-logo" width="300px" 
+         margin-left="auto" display="block" margin-right"auto">
+  </div>
+  <div class="column">
+    <img src="images/comp-sci.jpg" alt="comp-sci" width="500" 
+         margin-left="auto" display="block" margin-right"auto">
+  </div>
+</div>
+
+</br>
+</br>
 
 **Computational environment and Computational Chemistry on AWS EC2 platform.**
 
@@ -77,6 +91,7 @@ This Github repository provides information about high performance computing (HP
   - [Intel job script for running NWChem](sge/sge-running-nwchem-intel.md)
 - AWSBATCH
 - SLURM
+  - [Common command and parallel code](slurm)
   - [Script for running with distributed memory](slurm/slurm-nwchem-distributed-casper.sh)
   - [Script for running with hybrid memory](slurm/slurm-nwchem-hybrid-casper.sh)
 - TORQUE
