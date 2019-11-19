@@ -77,6 +77,7 @@ This Github repository provides information about high performance computing (HP
   - [Intel job script for running NWChem](sge/sge-running-nwchem-intel.md)
 - AWSBATCH
 - SLURM
+  - [Common command and parallel code](slurm)
   - [Script for running with distributed memory](slurm/slurm-nwchem-distributed-casper.sh)
   - [Script for running with hybrid memory](slurm/slurm-nwchem-hybrid-casper.sh)
 - TORQUE
