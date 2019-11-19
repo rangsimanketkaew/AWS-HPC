@@ -55,19 +55,19 @@ where `$NWCHEM_TOP` and `$NWCHEM_TARGET` are environment variables that define t
 
 ### 5. Running NWChem
 
-- Normal running command
+- Normal running
 
 ```
 mpirun -np N /$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem input.nw >& output.out &
 ```
 
-- Normal running command with specifying the number of processes per node
+- Normal running with specifying the number of processes per node
 
 ```
 mpirun -np N -ppn M /$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem input.nw >& output.out &
 ```
 
-- Running command with Casper
+- Running with Casper
 
 ```
 export NWCHEM_CASLIB=/full/path/to/casper/lib
@@ -79,7 +79,7 @@ mpirun -np N -ppn M -genv CSP_NG 1 \
 
 where N is the total number of MPI processes and M is the total number of MPI processes per node.
 
-*Note that casper can be used with only ARMCI method in order to speed up the calculation.*
+*Note that the [Casper](https://www.mcs.anl.gov/project/casper/) is used for enhancing the performance of ARMCI method especially on cross-node MPI calculation.*
 
 ## 6. Submitting NWChem job to the cluster using job scheduler
 
