@@ -1,8 +1,15 @@
 # CompEnv-AWS-EC2
 
-![aws-logo](images/1200px-Amazon_Web_Services_Logo.svg.png)
+<div class="row">
+  <div class="column">
+    <img src="images/1200px-Amazon_Web_Services_Logo.svg.png" alt="aws-logo" width="100px">
+  </div>
+  <div class="column">
+    <img src="images/comp-sci.jpg" alt="comp-sci" width="100">
+  </div>
+</div>
 
-<img src="images/1200px-Amazon_Web_Services_Logo.svg.png" alt="Snow" style="width:100px">
+
 
 
 **Computational environment and Computational Chemistry on AWS EC2 platform.**
