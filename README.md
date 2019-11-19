@@ -46,8 +46,8 @@ This Github repository provides information about high performance computing (HP
      - [Red Hat 8 with HVM](https://aws.amazon.com/marketplace/pp/B07T4SQ5RZ?qid=1572577369870&sr=0-1&ref_=srh_res_product_title)
      - [Red Hat 7.2 with HVM](https://aws.amazon.com/marketplace/pp/B019NS7T5I?qid=1572577369870&sr=0-2&ref_=srh_res_product_title)
      - [CentOS 7 with HVM](https://aws.amazon.com/marketplace/pp/Centosorg-CentOS-7-x8664-with-Updates-HVM/B00O7WM7QW)
-       - [Setting up CentOS 7](setup-centos-7.md)
-       - [Installing basic development tools](install-basic-tools-centos.md)
+       - [Setting up CentOS 7](linux/setup-centos-7.md)
+       - [Installing basic development tools](linux/install-basic-tools-centos.md)
      - [Ubuntu 19.04](https://aws.amazon.com/marketplace/pp/B07RF8N2K2?qid=1572577464695&sr=0-9&ref_=srh_res_product_title)
      - [Ubuntu 18.04 LTS](https://aws.amazon.com/marketplace/pp/B07CQ33QKV?qid=1572577464695&sr=0-1&ref_=srh_res_product_title)
      - [Ubuntu 16.04 LTS](https://aws.amazon.com/marketplace/pp/B01JBL2M0O?qid=1572577464695&sr=0-2&ref_=srh_res_product_title)
@@ -78,8 +78,8 @@ This Github repository provides information about high performance computing (HP
 
 ## Getting started parallel cluster
 
-- [First landing on the cluster](first-landing-on-the-cluster.md)
-- [Measuring computer power using LINPACK (benchmarking)](measure-computer-power.md) (optional)
+- [First landing on the cluster](aws/first-landing-on-the-cluster.md)
+- [Measuring computer power using LINPACK (benchmarking)](misc/measure-computer-power.md) (optional)
 - Evaluating the performance of parallel file system using IOR (optional)
 
 ## Using job scheduler
@@ -99,8 +99,8 @@ This Github repository provides information about high performance computing (HP
 ## Installing development tools
 
 - GNU and GCC compilers
-- [Intel Compiler](install-intel-library.md)
-- [Intel Math Kernel Library (MKL)](install-intel-library.md)
+- [Intel Compiler](intel/install-intel-compiler.md)
+- [Intel Math Kernel Library (MKL)](intel/install-intel-mkl.md)
 - ATLAS
 - BLAS
 - LAPACK
@@ -109,14 +109,14 @@ This Github repository provides information about high performance computing (HP
 ## Installing message passing interface (MPI) library
 
 - [Intel MPI](install-intel-library.md)
-- [OpenMPI](install-openmpi.md)
+- [OpenMPI](mpi/install-openmpi.md)
 - MPICH
 - MVAPICH2
 
 ## Installing GPU-accelerated library
 
-- [NVIDIA driver](install-nvidia-driver-and-cuda-toolkit.md)
-- [CUDA toolkit](install-nvidia-driver-and-cuda-toolkit.md)
+- [NVIDIA driver](gpu/install-nvidia-driver-and-cuda-toolkit.md)
+- [CUDA toolkit](gpu/install-nvidia-driver-and-cuda-toolkit.md)
 
 ## Installing computational chemistry software
 

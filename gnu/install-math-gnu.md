@@ -1,6 +1,6 @@
 # Install Mathematics Library for Scientific Calculation
 
-This tutorial covers the installation instructions of following items:
+This tutorial covers the installation instructions of the following libraries using GNU development tools:
 
 - ATLAS
 - BLACS
@@ -274,4 +274,3 @@ cp /root/SCALAPACK/libscalapack.a /usr/local/lib
 ## Contact 
 
 Rangsiman Ketkaew - rangsiman1993@gmail.com
-
