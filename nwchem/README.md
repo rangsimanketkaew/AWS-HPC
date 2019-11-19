@@ -10,65 +10,61 @@ Documentation: https://github.com/nwchemgit/nwchem/wiki
 
 ## Specification of AWS EC2 instance I used for writing this page
 
-On the day of this writing:
-
-- I have compiled and installed NWChem on CentOS 7 and Ubuntu 18.04 with and without GPU CUDA accelerator.
-- Instance type
+- I compiled and installed NWChem 6.8.1 and 7.0.0 beta 1 on Red Hat 8, CentOS 7, Ubuntu 16.04, and Ubuntu 18.04 with and without enabling GPU (CUDA).
+- Instance types
   - CPU instance: t2.micro (free tier)
+  - CPU instance: c5.xlarge - 4 CPU cores
   - CPU instance: c5.4xlarge - 16 CPU cores
   - GPU instance: g3s.xlarge - 4 CPU cores + 1 GPU
 - Storage
   - SSD
   - 30 GiB (free tier)
 
-## Install NWChem on AWS EC2 cluster
+## 1. General prerequisites for compiling program
 
-### Prerequisites
-
-- root or sudo permission (for installing program at global level)
-- C++ and Fortran compilers such as GNU or Intel compiler
-- MPI library such as Intel MPI and OpenMPI
-- Math library such as Intel MKL, BLAS, LAPACK, and ScaLAPACK
+- C++ and Fortran compilers such as Intel or GNU compiler
+- MPI library such as Intel MPI or OpenMPI
+- Math library such as Intel MKL (BLAS, LAPACK, and ScaLAPACK) or GNU OpenBLAS and OpenScaLAPACK
 - Make
-- ARMCI platform (optional)
+- Python 2.6 or 2.7
+- ARMCI (optional)
+- Casper (optional)
+- root or sudo permission (needed for installing program at global space)
 
-Please note that on the day of this writing the latest version of NWChem is 6.8.1.
+## 2. Creating Script containing all configuration parameters
 
-### Creating Bash script for automated installation
+[NWChem documentation - Compiling NWChem](https://github.com/nwchemgit/nwchem/wiki/Compiling-NWChem)
 
-Example of Bash script for compiling and installing NWChem 6.8.1 on different Linux distributions:
+> Look at the bottom of this page for example of Bash scripts
 
-1. CentOS 7
-2. CentOS 7 with GPU
-3. CentOS 7 with GPU and ARMCI=MPI-PR
-4. CentOS 8 with GPU and ARMCI=MPI-PR
-5. Ubuntu 18.04
-6. Ubuntu 18.04 with GPU
+## 3. Starting compilation
 
-### Let's compile and install NWChem
+Execute the script to start compilation using the following commands
 
-1. Create and execute the install (bash) script with MPI on your system
-   - [OpenMPI on Ubuntu](install-nwchem-openmpi.md)
-   - [OpenMPI + GPU on Ubuntu](install-nwchem-openmpi-gpu.md)
-   - [OpenMPI + GPU on AWS Deep Learning Ubuntu AMI](install-nwchem-openmpi-gpu-on-aws-deep-learning-ubuntu.md)
-   - OpenMPI on Red Hat/CentOS
-   - Intel MPI on Red Hat/CentOS
-   - Intel MPI + GPU on Red Hat/CentOS
-   - MPICH MPI on Red Hat/CentOS
-   - MPICH MPI + GPU on Red Hat/CentOS
-   - MVAPICH2 MPI on Red Hat/CentOS
-   - MVAPICH2 MPI + GPU on Red Hat/CentOS
-2. Wait for 20 - 40 min - depending on configuration setting, compiler and system performance
-3. NWChem executable binary will be created at `$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem`
+```
+chmod +x INSTALL_NWCHEM_SCRIPT.sh
+./INSTALL_NWCHEM_SCRIPT.sh
+```
+
+## 4. During compilation
+
+1. Compilation and installation can take 20 - 60 min depending on configuration setting, compiler and system performance.
+2. If it is done successfully, the NWChem executable binary will be created at `$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem` by default.
 
 where `$NWCHEM_TOP` and `$NWCHEM_TARGET` are environment variables that define the top directory of `nwchem-6.8.1` and platform of machine such as `LINUX64`.
 
-### Running NWChem
+### 5. Running NWChem
 
 - Normal running command
 
 ```
-mpirun -np N -ppn M /full/path/to/nwchem input.nw >& output.out &
+mpirun -np N /$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem input.nw >& output.out &
+```
+
+- Normal running command with specifying the number of processes per node
+
+```
+mpirun -np N -ppn M /$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem input.nw >& output.out &
 ```
 
 - Running command with Casper
@@ -76,15 +72,16 @@ mpirun -np N -ppn M /full/path/to/nwchem input.nw >& output.out &
 ```
 export NWCHEM_CASLIB=/full/path/to/casper/lib
 
-mpirun -np N -ppn M -genv CSP_NG 1 -genv LD_PRELOAD $NWCHEM_CASLIB/libcasper.so \
-        /full/path/to/nwchem input.nw >& output.out
+mpirun -np N -ppn M -genv CSP_NG 1 \
+        -genv LD_PRELOAD $NWCHEM_CASLIB/libcasper.so \
+        /$NWCHEM_TOP/bin/$NWCHEM_TARGET/nwchem input.nw >& output.out
 ```
 
 where N is the total number of MPI processes and M is the total number of MPI processes per node.
 
 *Note that casper can be used with only ARMCI method in order to speed up the calculation.*
 
-## Submitting NWChem job to the cluster by SGE and SLURM
+## 6. Submitting NWChem job to the cluster using job scheduler
 
 - SGE
 
@@ -93,6 +90,26 @@ where N is the total number of MPI processes and M is the total number of MPI pr
 - SLURM
 
 [SLURM scripts for submitting NWChem jobs](../slurm)
+
+---
+
+## Example of Bash script for automated compilation
+
+### Red Hat and CentOS
+
+- OpenMPI on Red Hat/CentOS
+- Intel MPI on Red Hat/CentOS
+- Intel MPI + GPU on Red Hat/CentOS
+- MPICH MPI on Red Hat/CentOS
+- MPICH MPI + GPU on Red Hat/CentOS
+- MVAPICH2 MPI on Red Hat/CentOS
+- MVAPICH2 MPI + GPU on Red Hat/CentOS
+
+### Ubuntu
+
+- [OpenMPI on Ubuntu](install-nwchem-openmpi.md)
+- [OpenMPI + GPU on Ubuntu](install-nwchem-openmpi-gpu.md)
+- [OpenMPI + GPU on AWS Deep Learning Ubuntu AMI](install-nwchem-openmpi-gpu-on-aws-deep-learning-ubuntu.md)
 
 ## Contact
 
