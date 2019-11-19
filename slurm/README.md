@@ -49,7 +49,7 @@ mpirun -n $SLURM_NTASKS [argv] program_executable [argv] ...
 
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 mpirun -n $SLURM_NTASKS [argv] program_executable [argv] ...
-``
+```
 
 ## Multi-node hybrid application (MPI+OpenMP)
 
