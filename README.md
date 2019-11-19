@@ -2,6 +2,9 @@
 
 ![aws-logo](images/1200px-Amazon_Web_Services_Logo.svg.png)
 
+<img src="images/1200px-Amazon_Web_Services_Logo.svg.png" alt="Snow" style="width:100px">
+
+
 **Computational environment and Computational Chemistry on AWS EC2 platform.**
 
 This Github repository provides information about high performance computing (HPC) and cluster management tools on AWS Cloud Cluster services. Also, it will tell how to leverage AWS services related to cloud cluster as follows:
