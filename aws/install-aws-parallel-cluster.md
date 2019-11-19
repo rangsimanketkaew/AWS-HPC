@@ -68,6 +68,29 @@ Master Subnet ID []: subnet-abcdefghigjlmnop1
 
 So far, there should be a small file called `config` created at `$HOME/.parallelcluster/config`. ParallelCluster uses this file by default for all configuration parameters for creating a cluster.
 
+An example of config file:
+
+```
+[aws]
+aws_region_name = us-east-1
+
+[cluster default]
+key_name = duff_key_us-east-1
+vpc_settings = public
+
+[vpc public]
+vpc_id = vpc-abcdefghigjlmnopq
+master_subnet_id = subnet-abcdefghigjlmnop1
+
+[global]
+cluster_template = default
+update_check = true
+sanity_check = true
+
+[aliases]
+ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
+```
+
 3. Now you can try creating the cluster using `pcluster` with `create` option.
 
 ```
