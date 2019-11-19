@@ -102,10 +102,11 @@ make FC=gfortran >& make.log
 6. Execute the script to start installation.
 
 ```
+chmod +x install-nwchem-openmpi-gpu.sh
 ./install-nwchem-openmpi-gpu.sh
 ```
 
-This can take 20 - 30 minutes depending on the performance of compiler and system.
+This can take 30 - 50 minutes depending on the performance of the configuration, compiler and the system.
 
 7. If it is done without any error, the executable binary file can be found at `$NWCHEM_TOP/bin/LINUX64/nwchem`. For example,
 
