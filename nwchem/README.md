@@ -49,7 +49,8 @@ Example of Bash script for compiling and installing NWChem 6.8.1 on different Li
 
 1. Create and execute the install (bash) script with MPI on your system
    - [OpenMPI on Ubuntu](install-nwchem-openmpi.md)
-   - [OpenMPI + GPI on Ubuntu](install-nwchem-openmpi-gpu.md)
+   - [OpenMPI + GPU on Ubuntu](install-nwchem-openmpi-gpu.md)
+   - [OpenMPI + GPU on AWS Deep Learning Ubuntu AMI](install-nwchem-openmpi-gpu-on-aws-deep-learning-ubuntu.md)
    - OpenMPI on Red Hat/CentOS
    - Intel MPI on Red Hat/CentOS
    - Intel MPI + GPU on Red Hat/CentOS
