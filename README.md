@@ -1,16 +1,20 @@
 # CompEnv-AWS-EC2
 
+</br>
+
 <div class="row">
   <div class="column">
-    <img src="images/1200px-Amazon_Web_Services_Logo.svg.png" alt="aws-logo" width="100px">
+    <img src="images/1200px-Amazon_Web_Services_Logo.svg.png" alt="aws-logo" width="300px" 
+         margin-left="auto" display="block" margin-right"auto">
   </div>
   <div class="column">
-    <img src="images/comp-sci.jpg" alt="comp-sci" width="100">
+    <img src="images/comp-sci.jpg" alt="comp-sci" width="500" 
+         margin-left="auto" display="block" margin-right"auto">
   </div>
 </div>
 
-
-
+</br>
+</br>
 
 **Computational environment and Computational Chemistry on AWS EC2 platform.**
 
