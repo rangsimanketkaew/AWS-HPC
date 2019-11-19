@@ -121,16 +121,26 @@ This Github repository provides information about high performance computing (HP
 ## Installing computational chemistry software
 
 - [NWChem](./nwchem)
-  - [Installing with OpenMPI](nwchem/install-nwchem-openmpi.md)
-  - [Installing with OpenMPI with GPU CUDA](nwchem/install-nwchem-openmpi-gpu.md)
+  - Ubuntu
+    - [Installing with OpenMPI](nwchem/install-nwchem-openmpi.md)
+    - [Installing with OpenMPI and enabling CUDA](nwchem/install-nwchem-openmpi-gpu.md)
+    - [Installing with OpenMPI and enabling CUDA on pre-configured AWS Deep Learning AMI (Ubuntu 18.04)](nwchem/install-nwchem-openmpi-gpu-on-aws-deep-learning-ubuntu.md)
+  - Red Hat / CentOS
+    - Installing with OpenMPI and enabling CUDA
+    - Installing with Intel MPI and enabling CUDA
+    - Installing with MPICH and enabling CUDA
+    - Installing with MVAPICH2 and enabling CUDA
   - [Note on NWChem compilation](nwchem/note-on-nwchem.md)
 - ORCA
+  - OpenMPI
 - GAMESS (US)
 - PSI4
 - OpenMolcas
 - CP2K
 - Gromacs
 - LAMMPS
+- VASP
+- Quantum ESPRESSO
 
 ## Useful notes
 
