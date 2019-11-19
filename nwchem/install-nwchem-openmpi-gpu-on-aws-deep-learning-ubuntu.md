@@ -1,4 +1,4 @@
-# Install NWChem with OpenMPI & GPU enabled
+# Install NWChem with OpenMPI & GPU enabled on pre-configured AWS Deep Learning Ubuntu AMI
 
 ## Prerequisites
 1. AWS Ubuntu ([Deep Learning AMI (Ubuntu 18.04) Version 25.3 - ami-0d21095cdfb1566c2](https://aws.amazon.com/marketplace/pp/B07Y43P7X5?qid=1574192208398&sr=0-1&ref_=srh_res_product_title))
