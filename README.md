@@ -1,4 +1,4 @@
-# CompEnv-AWS-EC2
+# AWS for HPC
 
 </br>
 
@@ -16,9 +16,9 @@
 </br>
 </br>
 
-**Computational environment and Computational Chemistry on AWS EC2 platform.**
+**Computational environment for scientific computing (focusing on computational chemistry) on AWS EC2 platform.**
 
-This Github repository provides information about high performance computing (HPC) and cluster management tools on AWS Cloud Cluster services. Also, it will tell how to leverage AWS services related to cloud cluster as follows:
+This repository provides information about high-performance computing (HPC) and cluster management tools on AWS Cloud Cluster services. I compiled my notes so that you can learn how to leverage AWS services related to cloud clusters:
 
 - Amazon Elastic Cloud Cluster (EC2)
 - Amazon ParallelCluster
@@ -31,7 +31,7 @@ This Github repository provides information about high performance computing (HP
 
 **Note that these notes should be read from top to bottom.**
 
-## Getting started and quick launching AWS EC2 instance
+## Getting started and quickly launching an AWS EC2 instance
 
 - [What is AWS EC2?](https://www.google.com/search?q=what+is+aws+ec2&rlz=1C1CHBF_enTH823TH823&oq=what+is+AWS+EC2)
 - [Creating your first compute node on AWS EC2](aws/create-aws-ec2-instance.md)
@@ -42,7 +42,7 @@ This Github repository provides information about high performance computing (HP
 1. Go to https://aws.amazon.com/ec2/ and sign in to the AWS EC2 console with your Account ID, IAM username, and password
 2. Go to `Service` and click `EC2 dashboard` and select Launch instance
 3. Select an Amazon Machine Image (AMI)
-   - Choosing Linux distribution (deliver method by Amazon Machine Image (AMI))
+   - Choose a Linux distribution (deliver method by Amazon Machine Image (AMI))
      - [Red Hat 8 with HVM](https://aws.amazon.com/marketplace/pp/B07T4SQ5RZ?qid=1572577369870&sr=0-1&ref_=srh_res_product_title)
      - [Red Hat 7.2 with HVM](https://aws.amazon.com/marketplace/pp/B019NS7T5I?qid=1572577369870&sr=0-2&ref_=srh_res_product_title)
      - [CentOS 7 with HVM](https://aws.amazon.com/marketplace/pp/Centosorg-CentOS-7-x8664-with-Updates-HVM/B00O7WM7QW)
@@ -59,13 +59,13 @@ This Github repository provides information about high performance computing (HP
 9. Launch instance
 10. Create a new key pair or choose an existing key pair
 
-**Let's keep in mind downloading a new created key pair (.pem) before launching instance as you will not be able to download it again.**
+**Let's keep in mind downloading a newly created key pair (.pem) before launching an instance, as you will not be able to download it again.**
 
 ## Creating AMI image (optional)
 
 - Create AMI image
-- Launch new instance using created AMI image
-- Launch new parallel cluster using created AMI image
+- Launch a new instance using the created AMI image
+- Launch a new parallel cluster using the created AMI image
 
 ## Creating cloud cluster
 
@@ -80,7 +80,7 @@ This Github repository provides information about high performance computing (HP
 
 - [First landing on the cluster](aws/first-landing-on-the-cluster.md)
 - [Measuring computer power using LINPACK (benchmarking)](misc/measure-computer-power.md) (optional)
-- Evaluating the performance of parallel file system using IOR (optional)
+- Evaluating the performance of a parallel file system using IOR (optional)
 
 ## Using job scheduler
 
@@ -149,7 +149,7 @@ This Github repository provides information about high performance computing (HP
 
 ## More to read
 
-If you are interested in AWS cloud cluster service, then I recommend you to read or visit the following website, blog, and forum!
+If you are interested in the AWS cloud cluster service, I recommend reading or visiting the following websites, blogs, and forums.
 
 - https://aws-parallelcluster.readthedocs.io/en/latest/
 - https://github.com/aws/aws-parallelcluster
